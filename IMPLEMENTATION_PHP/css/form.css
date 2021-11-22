@@ -1,0 +1,101 @@
+.form-container {
+    max-width: 600px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 30px 0;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-container form {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.form-container .form-group {
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.form-container .form-group label, .form-container .form-group p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.form-container .form-group .input-radio {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+
+.form-container .form-control {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    padding: 6px 12px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+
+.form-container .form-group .submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4b4b4b;
+    cursor: pointer;
+    border-radius: 2px;
+    border: none;
+    color: white;
+}
+
+.form-container .form-group .input-date {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    
+}
+
+.form-container .form-group .input-date *{
+    width: 40%;
+    padding: 6px 10px;
+    
+}
+
+.message {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.message label, .message p {
+    display: block !important;
+    color: black !important;
+    text-align: center;
+}
+
+.message label {
+    font-size: 1.4em !important;
+    font-weight: bold !important;
+}
+
+.Erreur label {
+    color: #ff4f4f !important;
+}
