@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS internaluser (
     FOREIGN KEY (idrole) REFERENCES role(idrole)
     );
 
-INSERT INTO internaluser (idinternaluser,nom,prenom,email,password,username,photo,idrole) VALUES
+INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,username,photo,idrole) VALUES
 (1,"CAULLIREAU","Dorian","dorian.caullireau@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","caullird",'url not exists',1),
 (2,"PERROLLAZ","Maverick","maverick.perrollaz@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","perrollm",'url not exists',1),
 (3,"KOEBERLE ","Celien","celien.koeberle@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","koeberlec",'url not exists',1),
