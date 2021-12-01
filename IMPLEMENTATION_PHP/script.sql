@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS internaluser;
+DROP TABLE IF EXISTS teacher;
 DROP TABLE IF EXISTS student;
 DROP TABLE IF EXISTS building;
 DROP TABLE IF EXISTS classroom;
@@ -8,6 +9,7 @@ DROP TABLE IF EXISTS peoplegroup;
 DROP TABLE IF EXISTS formation;
 DROP TABLE IF EXISTS educationalunit;
 DROP TABLE IF EXISTS module;
+DROP TABLE IF EXISTS typecourse;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS evaluation;
 DROP TABLE IF EXISTS homework;
@@ -74,12 +76,12 @@ INSERT INTO student (idstudent,num_INE,num_student,idinternaluser) VALUES
 CREATE TABLE IF NOT EXISTS teacher (
     idteacher int(11) NOT NULL AUTO_INCREMENT,
     num_box int(11) NULL,
-    PRIMARY KEY (idteacher),
+    PRIMARY KEY (idteacher)
     );
 
 INSERT INTO teacher (idteacher, num_box) VALUES
 (1, 201),
-(2, 202,
+(2, 202),
 (3, 203),
 (4, 204),
 (5, 205);
