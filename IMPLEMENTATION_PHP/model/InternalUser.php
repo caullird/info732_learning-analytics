@@ -3,11 +3,12 @@
 class InternalUser extends Model {
 
 	protected $_idinternaluser;
-	protected $_nom;
-	protected $_prenom;
+	protected $_name_user;
+	protected $_forname_user;
   	protected $_email;
   	protected $_password;
   	protected $_username;
+	protected $_picture;
  	protected $_idrole;
 	protected $_deleted; 
 

@@ -3,7 +3,7 @@
 class Role extends Model {
 
 	protected $_idrole;
-	protected $_name_role;
+	protected $_designation_role;
 
 
 	public function __toString() {

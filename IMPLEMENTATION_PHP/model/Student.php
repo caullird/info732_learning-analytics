@@ -7,7 +7,7 @@ class Student extends Model {
 	protected $_num_student;
   	protected $_idinternaluser;
 
- 	//TODO
+ 	//TODO 
 	public function __toString() {
 		return get_class($this).": ".$this->num_student;
 	}

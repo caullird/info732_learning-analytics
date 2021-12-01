@@ -5,6 +5,6 @@ class BelongGroup extends Model {
 	protected $_idinternaluser;
 	protected $_idpeoplegroup;
 
-}
+} 
 
 
