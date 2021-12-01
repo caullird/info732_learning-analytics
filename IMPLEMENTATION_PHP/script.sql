@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS internaluser (
     FOREIGN KEY (idrole) REFERENCES role(idrole)
     );
 
-INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,username,photo,idrole) VALUES
+INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,username,picture,idrole) VALUES
 (1,"CAULLIREAU","Dorian","dorian.caullireau@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","caullird",'url not exists',1),
 (2,"PERROLLAZ","Maverick","maverick.perrollaz@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","perrollm",'url not exists',1),
 (3,"KOEBERLE ","Celien","celien.koeberle@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","koeberlec",'url not exists',1),
@@ -151,7 +151,7 @@ INSERT INTO belonggroup (idbelonggroup, idinternaluser,idpeoplegroup) VALUES
 CREATE TABLE IF NOT EXISTS formation (
     idformation int(11) NOT NULL AUTO_INCREMENT,
     name_formation varchar(100) NOT NULL,
-    PRIMARY KEY (ideducatinalunit)
+    PRIMARY KEY (idformation)
     );
 
 
@@ -161,14 +161,14 @@ INSERT INTO formation(idformation,name_formation) VALUES
 (3,"MM");
 
 CREATE TABLE IF NOT EXISTS educationalunit (
-    ideducatinalunit int(11) NOT NULL AUTO_INCREMENT,
+    ideducationalunit int(11) NOT NULL AUTO_INCREMENT,
     title_educationalunit varchar(100) NOT NULL,
     description_educationalunit varchar(2000) NOT NULL,
-    PRIMARY KEY (ideducatinalunit)
+    PRIMARY KEY (ideducationalunit)
     );
 
 
-INSERT INTO educationaleunit (ideducatinalunit,title_educationalunit,description_educationalunit) VALUES
+INSERT INTO educationaleunit (ideducationalunit,title_educationalunit,description_educationalunit) VALUES
 (1,"UE701 - Mathématiques et données","Description empty for this educational unit"),
 (2,"UE702 - Informatique et conception","Description empty for this educational unit"),
 (3,"UE703 - Visualisation et gouvernance de la donnée","Description empty for this educational unit");
@@ -241,13 +241,12 @@ CREATE TABLE IF NOT EXISTS homework(
     checked boolean NOT NULL default FALSE,
     idmodule int(11) NOT NULL,
     idstudent int(11) NOT NULL,
-    FOREIGN KEY (idcorrector) REFERENCES internaluser(idinternaluser),
     FOREIGN KEY (idstudent) REFERENCES internaluser(idinternaluser),
     FOREIGN KEY (idmodule) REFERENCES module(idmodule),
-    PRIMARY KEY (idevaluation)
+    PRIMARY KEY (idhomework)
     );
 
 INSERT INTO homework(idhomework, title_homework, description_homework, deadline, checked, idmodule, idstudent) VALUES
-(1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 1),
-(2, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 2),
-(3, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 3),
+(1, "Devoir Maison 1", "Description empty for this homework", "12-01-2021", FALSE, 1, 1),
+(2, "Devoir Maison 1", "Description empty for this homework", "12-01-2021", FALSE, 1, 2),
+(3, "Devoir Maison 1", "Description empty for this homework", "12-01-2021", FALSE, 1, 3);
