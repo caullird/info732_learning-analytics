@@ -71,6 +71,19 @@ INSERT INTO student (idstudent,num_INE,num_student,idinternaluser) VALUES
 (7,"1445D8860","8985444444",7),
 (8,"14E5D8861","8944589444",8);
 
+CREATE TABLE IF NOT EXISTS teacher (
+    idteacher int(11) NOT NULL AUTO_INCREMENT,
+    num_box int(11) NULL,
+    PRIMARY KEY (idteacher),
+    );
+
+INSERT INTO teacher (idteacher, num_box) VALUES
+(1, 201),
+(2, 202,
+(3, 203),
+(4, 204),
+(5, 205);
+
 CREATE TABLE IF NOT EXISTS building(
     idbuilding int(11) NOT NULL AUTO_INCREMENT,
     name_building varchar(100) NULL,
@@ -168,7 +181,7 @@ CREATE TABLE IF NOT EXISTS educationalunit (
     );
 
 
-INSERT INTO educationaleunit (ideducationalunit,title_educationalunit,description_educationalunit) VALUES
+INSERT INTO educationalunit (ideducationalunit,title_educationalunit,description_educationalunit) VALUES
 (1,"UE701 - Mathématiques et données","Description empty for this educational unit"),
 (2,"UE702 - Informatique et conception","Description empty for this educational unit"),
 (3,"UE703 - Visualisation et gouvernance de la donnée","Description empty for this educational unit");
@@ -188,6 +201,17 @@ INSERT INTO module (idmodule,title_module, description_module, gradecoefficient_
 (2,"INFO731 - Sécurité et cryptographie", "Description empty for this module", 3.0, 10),
 (3,"MATH741 - Probabilité et statistiques", "Description empty for this module", 2.0, 10);
 
+CREATE TABLE IF NOT EXISTS typecourse (
+    idtypecourse int(11) NOT NULL AUTO_INCREMENT,
+    type_course varchar(100) NOT NULL,
+    PRIMARY KEY (idtypecourse)
+);
+
+INSERT INTO typecourse (idtypecourse,type_course) VALUES
+(1,"CM"),
+(2,"TD"),
+(3,"TP");
+
 CREATE TABLE IF NOT EXISTS course (
     idcourse int(11) NOT NULL AUTO_INCREMENT,
     title_course varchar(100) NOT NULL,
@@ -199,19 +223,22 @@ CREATE TABLE IF NOT EXISTS course (
     idclassroom int(11) NOT NULL,
     idpeoplegroup int(11) NOT NULL,
     idmodule int(11) NOT NULL,
+    idtypecourse int(11) NOT NULL,
     FOREIGN KEY (idprofessor) REFERENCES internaluser(idinternaluser),
     FOREIGN KEY (idclassroom) REFERENCES classroom(idclassroom),
     FOREIGN KEY (idpeoplegroup) REFERENCES peoplegroup(idpeoplegroup),
     FOREIGN KEY (idmodule) REFERENCES module(idmodule),
+    FOREIGN KEY (idtypecourse) REFERENCES typecourse(idtypecourse),
     PRIMARY KEY (idcourse)
     );
 
-INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idprofessor,idclassroom,idpeoplegroup, idmodule) VALUES
-(1,"TD 1/4","Description empty for this course", "12/01/2021","08:00:00", "10:00:00", 9, 1, 1, 1),
-(2,"TD 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1),
-(3,"TD 3/4","Description empty for this course", "12/01/2021","16:00:00", "18:00:00", 9, 3, 1, 1),
-(4,"CM 1/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1),
-(5,"CM 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1);
+
+INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idprofessor,idclassroom,idpeoplegroup, idmodule,idtypecourse) VALUES
+(1,"TD 1/4","Description empty for this course", "12/01/2021","08:00:00", "10:00:00", 9, 1, 1, 1, 2),
+(2,"TD 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 2),
+(3,"TD 3/4","Description empty for this course", "12/01/2021","16:00:00", "18:00:00", 9, 3, 1, 1, 2),
+(4,"CM 1/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 1),
+(5,"CM 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 1);
 
 CREATE TABLE IF NOT EXISTS evaluation(
     idevaluation int(11) NOT NULL AUTO_INCREMENT,
@@ -247,6 +274,6 @@ CREATE TABLE IF NOT EXISTS homework(
     );
 
 INSERT INTO homework(idhomework, title_homework, description_homework, deadline, checked, idmodule, idstudent) VALUES
-(1, "Devoir Maison 1", "Description empty for this homework", "12-01-2021", FALSE, 1, 1),
-(2, "Devoir Maison 1", "Description empty for this homework", "12-01-2021", FALSE, 1, 2),
-(3, "Devoir Maison 1", "Description empty for this homework", "12-01-2021", FALSE, 1, 3);
+(1, "Devoir Maison 1", "Description empty for this homework", "2021-01-01 00:00:00", FALSE, 1, 1),
+(2, "Devoir Maison 1", "Description empty for this homework", "2021-01-01 00:00:00", FALSE, 1, 2),
+(3, "Devoir Maison 1", "Description empty for this homework", "2021-01-01 00:00:00", FALSE, 1, 3);
