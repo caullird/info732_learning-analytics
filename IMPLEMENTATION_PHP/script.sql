@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS formation (
     );
 
 
-INSERT INTO educationalunit (idformation,name_formation) VALUES
+INSERT INTO formation(idformation,name_formation) VALUES
 (1,"IDU"),
 (2,"SNI"),
 (3,"MM");
