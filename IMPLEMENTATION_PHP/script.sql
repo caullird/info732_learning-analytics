@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS classroom;
 DROP TABLE IF EXISTS belonggroup;
 DROP TABLE IF EXISTS peoplegroup;
 DROP TABLE IF EXISTS formation;
-DROP TABLE IF EXISTS educationaleunit;
+DROP TABLE IF EXISTS educationalunit;
 DROP TABLE IF EXISTS module;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS evaluation;
@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS formation (
     );
 
 
-INSERT INTO educationaleunit (idformation,name_formation) VALUES
+INSERT INTO educationalunit (idformation,name_formation) VALUES
 (1,"IDU"),
 (2,"SNI"),
 (3,"MM");
