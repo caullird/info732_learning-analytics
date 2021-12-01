@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS homework(
     idhomework int(11) NOT NULL AUTO_INCREMENT,
     title_homework varchar(100) NOT NULL,
     description_homework varchar(255) NULL,
-    deadline,homework DATETIME NOT NULL,
+    deadline DATETIME NOT NULL,
     checked boolean NOT NULL default FALSE,
     idmodule int(11) NOT NULL,
     idstudent int(11) NOT NULL,
@@ -249,5 +249,5 @@ CREATE TABLE IF NOT EXISTS homework(
 
 INSERT INTO homework(idhomework, title_homework, description_homework, deadline, checked, idmodule, idstudent) VALUES
 (1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 1),
-(1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 2),
-(1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 3),
+(2, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 2),
+(3, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 3),
