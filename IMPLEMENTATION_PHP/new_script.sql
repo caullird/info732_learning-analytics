@@ -5,10 +5,12 @@ DROP TABLE IF EXISTS building;
 DROP TABLE IF EXISTS classroom;
 DROP TABLE IF EXISTS belonggroup;
 DROP TABLE IF EXISTS peoplegroup;
+DROP TABLE IF EXISTS formation;
 DROP TABLE IF EXISTS educationaleunit;
 DROP TABLE IF EXISTS module;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS evaluation;
+DROP TABLE IF EXISTS homework;
 
 
 CREATE TABLE IF NOT EXISTS role (
@@ -25,12 +27,12 @@ INSERT INTO role (idrole,designation_role) VALUES
 
 CREATE TABLE IF NOT EXISTS internaluser (
     idinternaluser int(11) NOT NULL AUTO_INCREMENT,
-    nom varchar(100) NOT NULL,
-    prenom varchar(100) NOT NULL,
+    name_user varchar(100) NOT NULL,
+    forname_user varchar(100) NOT NULL,
     email varchar(100) NOT NULL,
     password varchar(100) NOT NULL,
     username varchar(100) NULL,
-    photo varchar(255) NULL,
+    picture varchar(255) NULL,
     idrole int(11) NULL,
     deleted boolean NOT NULL default FALSE,
     PRIMARY KEY (idinternaluser),
@@ -88,23 +90,22 @@ CREATE TABLE IF NOT EXISTS classroom (
     idclassroom int(11) NOT NULL AUTO_INCREMENT,
     name_classroom varchar(100) NULL,
     idbuilding int(11) NOT NULL,
-    capacity_classroom varchar(100) NULL,
+    capacity_classroom int(11) NULL,
     description_classroom varchar(500) NULL,
     FOREIGN KEY (idbuilding) REFERENCES building(idbuilding),
     PRIMARY KEY (idclassroom)
     );
 
 INSERT INTO classroom(idclassroom,name_classroom,idbuilding,capacity_classroom, description_classroom) VALUES
-(1,"14",1,"200 places", "Empty description for this classroom"),
-(2,"120",2,"200 places", "Empty description for this classroom"),
-(3,"107",1,"19 places", "Empty description for this classroom"),
-(4,"205",1,"30 places", "Empty description for this classroom"),
-(5,"206",3,"30 places", "Empty description for this classroom"),
-(6,"207",5,"30 places", "Empty description for this classroom"),
-(7,"208",5,"30 places", "Empty description for this classroom"),
-(8,"202",1,"25 places", "Empty description for this classroom"),
-(9,"203",4,"25 places", "Empty description for this classroom"),
-(10,"204",5,"25 places", "Empty description for this classroom");
+(1,"14",1,200, "Empty description for this classroom"),
+(2,"120",2,200, "Empty description for this classroom"),
+(3,"107",1,19, "Empty description for this classroom"),
+(5,"206",3,30, "Empty description for this classroom"),
+(6,"207",5,30, "Empty description for this classroom"),
+(7,"208",5,30, "Empty description for this classroom"),
+(8,"202",1,25, "Empty description for this classroom"),
+(9,"203",4,25, "Empty description for this classroom"),
+(10,"204",5,25, "Empty description for this classroom");
 
 CREATE TABLE IF NOT EXISTS peoplegroup (
     idpeoplegroup int(11) NOT NULL AUTO_INCREMENT,
@@ -147,19 +148,30 @@ INSERT INTO belonggroup (idbelonggroup, idinternaluser,idpeoplegroup) VALUES
 (15,7,3),
 (16,8,2);
 
-
-CREATE TABLE IF NOT EXISTS educationaleunit (
-    ideducatinaleunit int(11) NOT NULL AUTO_INCREMENT,
-    title_educationalunit varchar(100) NOT NULL,
-    description_educationalunit varchar(2000) NOT NULL,
-    PRIMARY KEY (ideducatinaleunit)
+CREATE TABLE IF NOT EXISTS formation (
+    idformation int(11) NOT NULL AUTO_INCREMENT,
+    name_formation varchar(100) NOT NULL,
+    PRIMARY KEY (ideducatinalunit)
     );
 
 
-INSERT INTO educationaleunit (ideducatinaleunit,title_educationalunit,description_educationalunit) VALUES
+INSERT INTO educationaleunit (idformation,name_formation) VALUES
+(1,"IDU"),
+(2,"SNI"),
+(3,"MM");
+
+CREATE TABLE IF NOT EXISTS educationalunit (
+    ideducatinalunit int(11) NOT NULL AUTO_INCREMENT,
+    title_educationalunit varchar(100) NOT NULL,
+    description_educationalunit varchar(2000) NOT NULL,
+    PRIMARY KEY (ideducatinalunit)
+    );
+
+
+INSERT INTO educationaleunit (ideducatinalunit,title_educationalunit,description_educationalunit) VALUES
 (1,"UE701 - Mathématiques et données","Description empty for this educational unit"),
 (2,"UE702 - Informatique et conception","Description empty for this educational unit"),
-(3,"UE702 - Visualisation et gouvernance de la donnée","Description empty for this educational unit");
+(3,"UE703 - Visualisation et gouvernance de la donnée","Description empty for this educational unit");
 
 CREATE TABLE IF NOT EXISTS module (
     idmodule int(11) NOT NULL AUTO_INCREMENT,
@@ -203,6 +215,7 @@ INSERT INTO course (idcourse,title_course,description_course,day_course,timebegi
 
 CREATE TABLE IF NOT EXISTS evaluation(
     idevaluation int(11) NOT NULL AUTO_INCREMENT,
+    title_evaluation varchar(100) NOT NULL,
     mark_evaluation float(3) NOT NULL,
     comment_evaluation varchar(255) NULL,
     idcorrector int(11) NOT NULL,
@@ -215,7 +228,26 @@ CREATE TABLE IF NOT EXISTS evaluation(
     PRIMARY KEY (idevaluation)
     );
 
-INSERT INTO evaluation(idevaluation, mark_evaluation, comment_evaluation, idcorrector, idstudent, idmodule) VALUES
-(1, 20, "Bon travail !", 10, 1, 1),
-(2, 10, "Du mieux depuis la dernière fois !", 10, 2,1),
-(3, 20, "Bon travail !", 10, 3,1);
+INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_evaluation, idcorrector, idstudent, idmodule) VALUES
+(1, "Probabilité Statistique", 20, "Bon travail !", 10, 1, 1),
+(2, "Probabilité Statistique", 10, "Du mieux depuis la dernière fois !", 10, 2,1),
+(3, "Probabilité Statistique", 20, "Bon travail !", 10, 3,1);
+
+CREATE TABLE IF NOT EXISTS homework(
+    idhomework int(11) NOT NULL AUTO_INCREMENT,
+    title_homework varchar(100) NOT NULL,
+    description_homework varchar(255) NULL,
+    deadline,homework DATETIME NOT NULL,
+    checked boolean NOT NULL default FALSE,
+    idmodule int(11) NOT NULL,
+    idstudent int(11) NOT NULL,
+    FOREIGN KEY (idcorrector) REFERENCES internaluser(idinternaluser),
+    FOREIGN KEY (idstudent) REFERENCES internaluser(idinternaluser),
+    FOREIGN KEY (idmodule) REFERENCES module(idmodule),
+    PRIMARY KEY (idevaluation)
+    );
+
+INSERT INTO homework(idhomework, title_homework, description_homework, deadline, checked, idmodule, idstudent) VALUES
+(1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 1),
+(1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 2),
+(1, "Devoir Maison 1", "Description empty for this homework", "12/01/2021", FALSE, 1, 3),
