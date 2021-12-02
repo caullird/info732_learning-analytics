@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS internaluser (
     picture varchar(255) NULL,
     admin boolean NOT NULL default FALSE,
     deleted boolean NOT NULL default FALSE,
-    PRIMARY KEY (idinternaluser),
+    PRIMARY KEY (idinternaluser)
     );
 
 INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,username,picture,admin) VALUES
