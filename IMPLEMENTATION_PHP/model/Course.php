@@ -10,6 +10,7 @@ class Course extends Model {
     protected $_timeend_course;
     protected $_idteacher;
     protected $_idclassroom;
+    protected $_idpeoplegroup;
     protected $_idmodule;
     protected $_idtypecourse;
 
