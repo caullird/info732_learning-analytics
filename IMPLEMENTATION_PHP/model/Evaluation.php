@@ -6,7 +6,7 @@ class Evaluation extends Model {
     protected $_title_evaluation;
 	protected $_mark_evaluation;
     protected $_comment_evaluation;
-    protected $_idcorrector;
+    protected $_idteacher;
     protected $_idstudent;
     protected $_tidmodule;
 
