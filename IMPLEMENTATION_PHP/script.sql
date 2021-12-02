@@ -13,10 +13,6 @@ DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS evaluation;
 DROP TABLE IF EXISTS homework;
 
-
-
-
-
 CREATE TABLE IF NOT EXISTS internaluser (
     idinternaluser int(11) NOT NULL AUTO_INCREMENT,
     name_user varchar(100) NOT NULL,
