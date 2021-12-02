@@ -1,23 +1,29 @@
-<img class="background-image" src="https://www.polytech.univ-smb.fr/fileadmin/_processed_/d/b/csm_Polytech_site_Annecy_vu_du_ciel_db27e8c54f.jpg">
 
-<div class="login-container">
-  <h2 id="connexion">Connexion</h2>
-  <div class="login-form">
-    <form action=".?r=login " method="post">
-      <div class="form-group">
-        <label for="uname">Identifiant</label>
-        <input type="text" name="uname" id="uname" required>
+<body>
+  <div class="error-pagewrap">
+    <div class="error-page-int">
+      <div class="text-center m-b-md custom-login">
+        <h3>Merci de vous connecter</h3>
+        <p>Toutes vos informations sur une seule page !</p>
       </div>
-      <div class="form-group">
-        <label for="psw">Mot de passe</label>
-        <input type="password" name="psw" id="psw" required>
+      <div class="content-error">
+        <div class="hpanel">
+                    <div class="panel-body">
+                        <form action="#" id="loginForm">
+                            <div class="form-group">
+                                <label class="control-label" for="username">Mail / Nom d'utilisateur</label>
+                                <input type="text" placeholder="example@gmail.com" title="Votre nom d'utilisateur" required="" value="" name="uname" id="uname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Mot de passe</label>
+                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="psw" id="psw" class="form-control">
+                              
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success btn-block loginbtn">Login</button>
+                        </form>
+                    </div>
+                </div>
       </div>
-      <div class="login-bttm">
-        <button type="submit">Connexion</button>
-        <div class="error">
-          <?php if ($data == 'error') print("Identifiant ou mot de passe invalide"); ?>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+    </div>   
+    </div>

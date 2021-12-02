@@ -6,7 +6,7 @@ class Module extends Model {
 	protected $_title_module;
 	protected $_description_module;
     protected $_gradecoefficient_module;
-    protected $_idprofessorreferent;	
+    protected $_idinternaluser;	
 
 
 	public function __toString() {

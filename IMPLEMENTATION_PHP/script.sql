@@ -193,12 +193,12 @@ CREATE TABLE IF NOT EXISTS module (
     title_module varchar(100) NOT NULL,
     description_module varchar(2000) NOT NULL,
     gradecoefficient_module float NOT NULL,
-    idprofessorreferent int(11) NOT NULL,
-    FOREIGN KEY (idprofessorreferent) REFERENCES internaluser(idinternaluser),
+    idteacher int(11) NOT NULL,
+    FOREIGN KEY (idteacher) REFERENCES teacher(idteacher),
     PRIMARY KEY (idmodule)
     );
 
-INSERT INTO module (idmodule,title_module, description_module, gradecoefficient_module, idprofessorreferent) VALUES
+INSERT INTO module (idmodule,title_module, description_module, gradecoefficient_module, idteacher) VALUES
 (1,"DATA731 - Modélisation stochastique", "Description empty for this module",3.0, 9 ),
 (2,"INFO731 - Sécurité et cryptographie", "Description empty for this module", 3.0, 10),
 (3,"MATH741 - Probabilité et statistiques", "Description empty for this module", 2.0, 10);
@@ -221,12 +221,12 @@ CREATE TABLE IF NOT EXISTS course (
     day_course varchar(25) NOT NULL,
     timebegin_course TIME NOT NULL,
     timeend_course TIME NOT NULL,
-    idprofessor int(11) NOT NULL,
+    idteacher int(11) NOT NULL,
     idclassroom int(11) NOT NULL,
     idpeoplegroup int(11) NOT NULL,
     idmodule int(11) NOT NULL,
     idtypecourse int(11) NOT NULL,
-    FOREIGN KEY (idprofessor) REFERENCES internaluser(idinternaluser),
+    FOREIGN KEY (idteacher) REFERENCES teacher(idteacher),
     FOREIGN KEY (idclassroom) REFERENCES classroom(idclassroom),
     FOREIGN KEY (idpeoplegroup) REFERENCES peoplegroup(idpeoplegroup),
     FOREIGN KEY (idmodule) REFERENCES module(idmodule),
@@ -235,7 +235,7 @@ CREATE TABLE IF NOT EXISTS course (
     );
 
 
-INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idprofessor,idclassroom,idpeoplegroup, idmodule,idtypecourse) VALUES
+INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idteacher,idclassroom,idpeoplegroup, idmodule,idtypecourse) VALUES
 (1,"TD 1/4","Description empty for this course", "12/01/2021","08:00:00", "10:00:00", 9, 1, 1, 1, 2),
 (2,"TD 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 2),
 (3,"TD 3/4","Description empty for this course", "12/01/2021","16:00:00", "18:00:00", 9, 3, 1, 1, 2),
@@ -247,17 +247,16 @@ CREATE TABLE IF NOT EXISTS evaluation(
     title_evaluation varchar(100) NOT NULL,
     mark_evaluation float(3) NOT NULL,
     comment_evaluation varchar(255) NULL,
-    idcorrector int(11) NOT NULL,
+    idteacher int(11) NOT NULL,
     idstudent int(11) NOT NULL,
     idmodule int(11) NOT NULL,
-    FOREIGN KEY (idcorrector) REFERENCES internaluser(idinternaluser),
-    FOREIGN KEY (idstudent) REFERENCES internaluser(idinternaluser),
-    FOREIGN KEY (idcorrector) REFERENCES internaluser(idinternaluser),
+    FOREIGN KEY (idteacher) REFERENCES teacher(idteacher),
+    FOREIGN KEY (idstudent) REFERENCES student(idstudent),
     FOREIGN KEY (idmodule) REFERENCES module(idmodule),
     PRIMARY KEY (idevaluation)
     );
 
-INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_evaluation, idcorrector, idstudent, idmodule) VALUES
+INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_evaluation, idteacher, idstudent, idmodule) VALUES
 (1, "Probabilité Statistique", 20, "Bon travail !", 10, 1, 1),
 (2, "Probabilité Statistique", 10, "Du mieux depuis la dernière fois !", 10, 2,1),
 (3, "Probabilité Statistique", 20, "Bon travail !", 10, 3,1);
@@ -270,7 +269,7 @@ CREATE TABLE IF NOT EXISTS homework(
     checked boolean NOT NULL default FALSE,
     idmodule int(11) NOT NULL,
     idstudent int(11) NOT NULL,
-    FOREIGN KEY (idstudent) REFERENCES internaluser(idinternaluser),
+    FOREIGN KEY (idstudent) REFERENCES student(idstudent),
     FOREIGN KEY (idmodule) REFERENCES module(idmodule),
     PRIMARY KEY (idhomework)
     );
