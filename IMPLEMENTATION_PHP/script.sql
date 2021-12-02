@@ -184,9 +184,9 @@ CREATE TABLE IF NOT EXISTS module (
     );
 
 INSERT INTO module (idmodule,title_module, description_module, gradecoefficient_module, idteacher) VALUES
-(1,"DATA731 - Modélisation stochastique", "Description empty for this module",3.0, 9 ),
-(2,"INFO731 - Sécurité et cryptographie", "Description empty for this module", 3.0, 10),
-(3,"MATH741 - Probabilité et statistiques", "Description empty for this module", 2.0, 10);
+(1,"DATA731 - Modélisation stochastique", "Description empty for this module",3.0, 1 ),
+(2,"INFO731 - Sécurité et cryptographie", "Description empty for this module", 3.0, 1),
+(3,"MATH741 - Probabilité et statistiques", "Description empty for this module", 2.0, 1);
 
 CREATE TABLE IF NOT EXISTS typecourse (
     idtypecourse int(11) NOT NULL AUTO_INCREMENT,
