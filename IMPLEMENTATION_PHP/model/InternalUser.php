@@ -9,8 +9,9 @@ class InternalUser extends Model {
   	protected $_password;
   	protected $_username;
 	protected $_picture;
- 	protected $_idrole;
+ 	protected $_admin;
 	protected $_deleted; 
+	
 
 	public function __toString() {
 		return get_class($this).": ".$this->nom;
