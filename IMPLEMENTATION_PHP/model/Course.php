@@ -8,9 +8,11 @@ class Course extends Model {
     protected $_day_course;
     protected $_timebegin_course;
     protected $_timeend_course;
-    protected $_idprofessor;
+    protected $_idteacher;
     protected $_idclassroom;
+    protected $_idpeoplegroup;
     protected $_idmodule;
+    protected $_idtypecourse;
 
 	public function __toString() {
 		return get_class($this).": ".$this->title_course;
