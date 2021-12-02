@@ -26,7 +26,7 @@ class StudentController extends Controller {
 		$no_data = "Aucun étudiant n'existe, vous pouvez en créer en cliquant sur le bouton ajouter";
 		$this->renderComponent("table", ["header"=>$table_header, "content"=>$table_content, "addBtn"=>$table_addBtn, "actions"=>$table_actions, "no_data"=>$no_data]);
 	}
-''''''''''''
+
 	public function update() {
 		id_or_back(parameters());
 		if($_SERVER['REQUEST_METHOD'] == "GET") {
