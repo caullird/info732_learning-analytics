@@ -18,8 +18,6 @@ class Controller {
 		$data = $d;
 
 		include_once "view/header.php";
-		if (isset($_SESSION['user']))
-			include_once "components/loggedHeader.php";
 		include_once "view/".strtolower($model)."/".$view.".php";
 		include_once "view/footer.php";
 	}

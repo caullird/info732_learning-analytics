@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS internaluser;
 DROP TABLE IF EXISTS teacher;
 DROP TABLE IF EXISTS student;
@@ -15,16 +14,7 @@ DROP TABLE IF EXISTS evaluation;
 DROP TABLE IF EXISTS homework;
 
 
-CREATE TABLE IF NOT EXISTS role (
-    idrole int(11) NOT NULL AUTO_INCREMENT,
-    designation_role varchar(100) NOT NULL,
-    PRIMARY KEY (idrole)
-    );
 
-INSERT INTO role (idrole,designation_role) VALUES
-(1,"Etudiant"),
-(2,"Professeur"),
-(3,"Administrateur");
 
 
 CREATE TABLE IF NOT EXISTS internaluser (
@@ -35,24 +25,23 @@ CREATE TABLE IF NOT EXISTS internaluser (
     password varchar(100) NOT NULL,
     username varchar(100) NULL,
     picture varchar(255) NULL,
-    idrole int(11) NULL,
+    admin boolean NOT NULL default FALSE,
     deleted boolean NOT NULL default FALSE,
     PRIMARY KEY (idinternaluser),
-    FOREIGN KEY (idrole) REFERENCES role(idrole)
     );
 
-INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,username,picture,idrole) VALUES
-(1,"CAULLIREAU","Dorian","dorian.caullireau@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","caullird",'url not exists',1),
-(2,"PERROLLAZ","Maverick","maverick.perrollaz@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","perrollm",'url not exists',1),
-(3,"KOEBERLE ","Celien","celien.koeberle@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","koeberlec",'url not exists',1),
-(4,"MASSIT","Clement","clement.massit@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","massitc",'url not exists',1),
-(5,"GOBJI","Zied","zied.gobji@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","gobjiz",'url not exists',1),
-(6,"COCHARD","Antoine","antoine.cochard@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","cocharda",'url not exists',1),
-(7,"SOUCHON","Romain","romain.souchon@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","souchonr",'url not exists',1),
-(8,"FORRAY","Gabriel","gabriel.forray@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","forrayg",'url not exists',1),
-(9,"ALLOUI","Ilham","ilham.alloui@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","allouii",'url not exists',2),
-(10,"VALET","Lionel","lionel.valet@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","valetl",'url not exists',2),
-(11,"Administrateur","","admin@admin.admin","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","admin",'url not exists',3);
+INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,username,picture,admin) VALUES
+(1,"CAULLIREAU","Dorian","dorian.caullireau@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","caullird",'url not exists',FALSE),
+(2,"PERROLLAZ","Maverick","maverick.perrollaz@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","perrollm",'url not exists',FALSE),
+(3,"KOEBERLE ","Celien","celien.koeberle@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","koeberlc",'url not exists',FALSE),
+(4,"MASSIT","Clement","clement.massit@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","massitc",'url not exists',FALSE),
+(5,"GOBJI","Zied","zied.gobji@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","gobjiz",'url not exists',FALSE),
+(6,"COCHARD","Antoine","antoine.cochard@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","cocharda",'url not exists',FALSE),
+(7,"SOUCHON","Romain","romain.souchon@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","souchonr",'url not exists',FALSE),
+(8,"FORRAY","Gabriel","gabriel.forray@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","forrayg",'url not exists',FALSE),
+(9,"ALLOUI","Ilham","ilham.alloui@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","allouii",'url not exists',FALSE),
+(10,"VALET","Lionel","lionel.valet@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","valetl",'url not exists',FALSE),
+(11,"Administrateur","","admin@admin.admin","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","admin",'url not exists',TRUE);
 
 CREATE TABLE IF NOT EXISTS student (
     idstudent int(11) NOT NULL AUTO_INCREMENT,
