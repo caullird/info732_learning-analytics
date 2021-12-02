@@ -181,8 +181,8 @@ CREATE TABLE IF NOT EXISTS course (
     title_course varchar(100) NOT NULL,
     description_course varchar(2000) NULL,
     day_course varchar(25) NOT NULL,
-    timebegin_course DATETIME NOT NULL,
-    timeend_course DATETIME NOT NULL,
+    timebegin_course TIME NOT NULL,
+    timeend_course TIME NOT NULL,
     idprofessor int(11) NOT NULL,
     idclassroom int(11) NOT NULL,
     idpeoplegroup int(11) NOT NULL,
@@ -195,11 +195,11 @@ CREATE TABLE IF NOT EXISTS course (
     );
 
 INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idprofessor,idclassroom,idpeoplegroup, idmodule) VALUES
-(1,"TD 1/4","Description empty for this course", "12/01/2021"," 08:00:00", " 10:00:00", 9, 1, 1, 1),
-(2,"TD 2/4","Description empty for this course", "12/01/2021"," 14:00:00", " 16:00:00", 9, 2, 1, 1),
-(3,"TD 3/4","Description empty for this course", "12/01/2021"," 16:00:00", " 18:00:00", 9, 3, 1, 1),
-(4,"CM 1/4","Description empty for this course", "12/01/2021"," 14:00:00", " 16:00:00", 9, 2, 1, 1),
-(5,"CM 2/4","Description empty for this course", "12/01/2021"," 14:00:00", " 16:00:00", 9, 2, 1, 1);
+(1,"TD 1/4","Description empty for this course", "12/01/2021","08:00:00", "10:00:00", 9, 1, 1, 1),
+(2,"TD 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1),
+(3,"TD 3/4","Description empty for this course", "12/01/2021","16:00:00", "18:00:00", 9, 3, 1, 1),
+(4,"CM 1/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1),
+(5,"CM 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1);
 
 CREATE TABLE IF NOT EXISTS evaluation(
     idevaluation int(11) NOT NULL AUTO_INCREMENT,
