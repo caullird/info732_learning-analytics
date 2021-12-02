@@ -11,5 +11,3 @@ class EducationalUnit extends Model {
 		return get_class($this).": ".$this->title_educationalunit;
 	}
 }
-
-
