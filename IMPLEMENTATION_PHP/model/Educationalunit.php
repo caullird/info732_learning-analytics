@@ -1,6 +1,6 @@
 <?php
 
-class Educationalunit extends Model {
+class EducationalUnit extends Model {
 
 	protected $_ideducationalunit;
 	protected $_title_educationalunit;
