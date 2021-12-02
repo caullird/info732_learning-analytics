@@ -103,8 +103,8 @@
                             <div class="breadcome-list">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <ul class="breadcome-menu">
-                                            <li><span class="bread-blod">Dashboard V.1</span>
+                                        <ul>
+                                            <li><span><h1>Hello <?php echo $data['internaluser'][0]->name_user ;?> <?php echo $data['internaluser'][0]->forname_user ;?>, nous sommes ravis de te retrouver ! </h1></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -115,66 +115,97 @@
                 </div>
             </div>
         </div>
+
+            <div class="widget-program-bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="hpanel shadow-inner hbggreen bg-1 responsive-mg-b-30">
+                                <div class="panel-body">
+                                    <div class="text-center content-bg-pro">
+                                        <h3>Title text</h3>
+                                        <p class="text-big font-light">
+                                            20
+                                        </p>
+                                        <small>
+                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                                </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="hpanel shadow-inner hbgblue bg-2 responsive-mg-b-30">
+                                <div class="panel-body">
+                                    <div class="text-center content-bg-pro">
+                                        <h3>Title text</h3>
+                                        <p class="text-big font-light">
+                                            160
+                                        </p>
+                                        <small>
+                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                                </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="hpanel shadow-inner hbgyellow bg-3 responsive-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                                <div class="panel-body">
+                                    <div class="text-center content-bg-pro">
+                                        <h3>Title text</h3>
+                                        <p class="text-big font-light">
+                                            750
+                                        </p>
+                                        <small>
+                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                                </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="hpanel shadow-inner hbgred bg-4 res-tablet-mg-t-30 dk-res-t-pro-30">
+                                <div class="panel-body">
+                                    <div class="text-center content-bg-pro">
+                                        <h3>Title text</h3>
+                                        <p class="text-big font-light">
+                                            0,43
+                                        </p>
+                                        <small>
+                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                                </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+
+        <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul>
+                                            <li><span><h1>Vos cours</h1></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
            <div class="courses-area mg-b-15">
             <div class="container-fluid">
                 <div class="row">
-                    <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="white-box">
-                            <h3 class="box-title">Browser Status</h3>
-                            <ul class="basic-list">
-                                <li>Google Chrome <span class="pull-right label-danger label-1 label">95.8%</span></li>
-                                <li>Mozila Firefox <span class="pull-right label-purple label-2 label">85.8%</span></li>
-                                <li>Apple Safari <span class="pull-right label-success label-3 label">23.8%</span></li>
-                                <li>Internet Explorer <span class="pull-right label-info label-4 label">55.8%</span></li>
-                                <li>Opera mini <span class="pull-right label-warning label-5 label">28.8%</span></li>
-                                <li>Mozila Firefox <span class="pull-right label-purple label-6 label">26.8%</span></li>
-                                <li>Safari <span class="pull-right label-purple label-7 label">31.8%</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="white-box res-mg-t-30 table-mg-t-pro-n">
-                            <h3 class="box-title">Visits from countries</h3>
-                            <ul class="country-state">
-                                <li>
-                                    <h2><span class="counter">1250</span></h2> <small>From Australia</small>
-                                    <div class="pull-right">75% <i class="fa fa-level-up text-danger ctn-ic-1"></i></div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-danger ctn-vs-1" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:75%;"> <span class="sr-only">75% Complete</span></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h2><span class="counter">1050</span></h2> <small>From USA</small>
-                                    <div class="pull-right">48% <i class="fa fa-level-up text-success ctn-ic-2"></i></div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-info ctn-vs-2" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:48%;"> <span class="sr-only">48% Complete</span></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h2><span class="counter">6350</span></h2> <small>From Canada</small>
-                                    <div class="pull-right">55% <i class="fa fa-level-up text-success ctn-ic-3"></i></div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success ctn-vs-3" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:55%;"> <span class="sr-only">55% Complete</span></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h2><span class="counter">950</span></h2> <small>From India</small>
-                                    <div class="pull-right">33% <i class="fa fa-level-down text-success ctn-ic-4"></i></div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success ctn-vs-4" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:33%;"> <span class="sr-only">33% Complete</span></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h2><span class="counter">3250</span></h2> <small>From Bangladesh</small>
-                                    <div class="pull-right">60% <i class="fa fa-level-up text-success ctn-ic-5"></i></div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-inverse ctn-vs-5" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> <span class="sr-only">60% Complete</span></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
 
                     <?php
                     foreach($data['module'] as $module){
@@ -188,14 +219,14 @@
                                     <h2><?php echo $module->title_module; ?></h2>
                                 </div>
                                 <div class="courses-alaltic">
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
+                                    <!-- <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
                                     <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span>
+                                    <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span> -->
                                 </div>
                                 <div class="course-des">
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Duration:</b> 6 Months</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Professor:</b> Jane Doe</p>
-                                    <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>Unité d'enseignement : </b> 6 Months</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>Professeur référent :</b> TODO</p>
+                                    <p><span><i class="fa fa-clock"></i></span> <b>Coefficient : </b><?php echo $module->gradecoefficient_module; ?></p>
                                 </div>
                                 <div class="product-buttons">
                                     <button type="button" class="button-default cart-btn">Read More</button>
@@ -209,6 +240,18 @@
                     ?>
 
 
+                </div>
+            </div>
+        </div>
+
+        <div class="calender-area mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="calender-inner">
+                            <div id='calendar'></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
