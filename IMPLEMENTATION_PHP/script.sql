@@ -275,7 +275,7 @@ CREATE TABLE IF NOT EXISTS moduleunit (
 
 INSERT INTO moduleunit (idmoduleunit,idmodule,ideducationalunit) VALUES
 (1,1,1),
-(2,2,1)
+(2,2,1),
 (3,3,1);
 
 CREATE TABLE IF NOT EXISTS modulestudent (
@@ -291,6 +291,6 @@ INSERT INTO modulestudent (idmodulepeople,idstudent,idmodule) VALUES
 (1,1,1),
 (2,1,2),
 (3,1,3),
-(4,2,1)
-(5,2,2)
+(4,2,1),
+(5,2,2),
 (6,2,3);
