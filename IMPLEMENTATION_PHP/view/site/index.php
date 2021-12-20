@@ -78,7 +78,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcome-list">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
                                         <ul>
                                             <li><span><h1>Hello <?php echo $data['internaluser'][0]->name_user ;?> <?php echo $data['internaluser'][0]->forname_user ;?>, nous sommes ravis de te retrouver ! </h1></span>
                                             </li>
