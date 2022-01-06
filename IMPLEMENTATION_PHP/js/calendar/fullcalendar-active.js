@@ -37,7 +37,7 @@ $(function() {
 				color: '#006DF0'
 			},
 			{
-				title: 'Long Event',
+				title: 'PROJ 731',
 				start: YM + '-07',
 				end: YM + '-10',
 				color: '#933EC5'
@@ -55,13 +55,13 @@ $(function() {
 				color: '#D80027'
 			},
 			{
-				title: 'Conference',
+				title: 'INFO 734',
 				start: YESTERDAY,
 				end: TOMORROW,
 				color: '#f3c30b'
 			},
 			{
-				title: 'Meeting',
+				title: 'DATA 732',
 				start: TODAY + 'T10:30:00',
 				end: TODAY + 'T12:30:00',
 				color: '#1f2e86'
@@ -72,7 +72,7 @@ $(function() {
 				color: '#0D4CFF'
 			},
 			{
-				title: 'Meeting',
+				title: 'ISOC 731',
 				start: TODAY + 'T14:30:00',
 				color: '#1f2e86'
 			},
