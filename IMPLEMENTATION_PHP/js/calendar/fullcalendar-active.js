@@ -56,8 +56,8 @@ $(function() {
 			},
 			{
 				title: 'PROJ 732',
-				start: YESTERDAY,
-				end: TOMORROW,
+				start: YM + '-03',
+				end: YM + '-05',
 				color: '#f3c30b'
 			},
 			{
@@ -83,7 +83,7 @@ $(function() {
 			},
 			{
 				title: 'Restaurant',
-				start: TODAY + 'T20:00:00',
+				start: YM + '-18',
 				color: '#00BCD4'
 			},
 			{
