@@ -55,7 +55,7 @@ $(function() {
 				color: '#D80027'
 			},
 			{
-				title: 'INFO 734',
+				title: 'PROJ 732',
 				start: YESTERDAY,
 				end: TOMORROW,
 				color: '#f3c30b'
@@ -67,13 +67,13 @@ $(function() {
 				color: '#1f2e86'
 			},
 			{
-				title: 'Lunch',
+				title: 'Déjeuner',
 				start: TODAY + 'T12:00:00',
 				color: '#0D4CFF'
 			},
 			{
 				title: 'ISOC 731',
-				start: TODAY + 'T14:30:00',
+				start: YESTERDAY + 'T14:30:00',
 				color: '#1f2e86'
 			},
 			{
@@ -87,12 +87,12 @@ $(function() {
 				color: '#00BCD4'
 			},
 			{
-				title: 'My Birthday',
+				title: 'INFO 731',
 				start: TOMORROW + 'T07:00:00',
 				color: '#FF5722'
 			},
 			{
-				title: 'Meeting Polycrew',
+				title: 'Réunion Polycrew',
 				url: 'http://polycrew.fr/',
 				start: YM + '-28',
 				color: '#323232'
