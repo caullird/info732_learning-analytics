@@ -225,9 +225,9 @@ CREATE TABLE IF NOT EXISTS course (
 
 INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idteacher,idclassroom,idpeoplegroup, idmodule,idtypecourse) VALUES
 (1,"TD 1/4","Description vide pour ce course", "12/01/2021","08:00:00", "10:00:00", 4, 1, 1, 1, 2),
-(2,"TD 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 1, 2),
-(3,"TD 3/4","Description vide pour ce course", "12/01/2021","16:00:00", "18:00:00", 4, 3, 1, 1, 2),
-(4,"CM 1/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 1, 1),
+(2,"TD 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 2, 2),
+(3,"TD 3/4","Description vide pour ce course", "12/01/2021","16:00:00", "18:00:00", 4, 3, 1, 3, 2),
+(4,"CM 1/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 4, 1),
 (5,"CM 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 1, 1);
 
 CREATE TABLE IF NOT EXISTS evaluation(
