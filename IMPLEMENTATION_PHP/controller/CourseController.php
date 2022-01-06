@@ -10,14 +10,18 @@ class CourseController extends Controller {
 
         like_admin();
 
-        $this->render("index");
+        $this->render("index", [
+            'module' => Module::findOne(['idmodule' => parameters()['id']])
+        ]);
     }
 
     public function student(){
 
         like_student();
 
-        $this->render("index");
+        $this->render("index", [
+            'module' => Module::findOne(['idmodule' => parameters()['id']])
+        ]);
     }
 
 }
