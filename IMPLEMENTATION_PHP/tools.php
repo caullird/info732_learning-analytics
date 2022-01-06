@@ -60,3 +60,15 @@ function id_or_back($data){
 		go_back();
 	}
 }
+
+function like_admin(){
+    $iduser = 10;
+
+    $_SESSION["user"] = InternalUser::findOne(['idinternaluser' => $iduser]);
+}
+
+function like_student(){
+    $iduser = 1;
+
+    $_SESSION["user"] = InternalUser::findOne(['idinternaluser' => $iduser]);
+}

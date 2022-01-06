@@ -5,9 +5,7 @@ class SiteController extends Controller {
 
 		//TODO Changer avec id de connexion
 
-        $iduser = 1;
-
-        $_SESSION["user"] = InternalUser::findOne(['idinternaluser' => $iduser]);
+        like_student();
 
 		$this->render("index",
 			[

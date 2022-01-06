@@ -3,9 +3,7 @@
 class AdminController extends Controller {
     public function index() {
 
-        $iduser = 10;
-
-        $_SESSION["user"] = InternalUser::findOne(['idinternaluser' => $iduser]);
+        like_admin();
 
         $this->render("index",
             [

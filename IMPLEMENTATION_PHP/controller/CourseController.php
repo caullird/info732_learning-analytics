@@ -3,26 +3,25 @@
 class CourseController extends Controller {
 
     public function index() {
-        var_dump(parameters());
+
     }
 
     public function admin(){
-        $this->render("index",
-            [
-                'module' => Module::findAll(),
-                'internaluser' => InternalUser::findOne(['idinternaluser' => $_SESSION["user"]])
-            ]
-        );
+
+        like_admin();
+
+        $this->render("index",[
+            
+        ]);
     }
 
     public function student(){
-        $this->render("index",
-            [
-                'module' => Module::findAll(),
-                'internaluser' => InternalUser::findOne(['idinternaluser' => $_SESSION["user"]])
-            ]
-        );
+
+        like_student();
+
+        $this->render("index");
     }
+
 }
 
 
