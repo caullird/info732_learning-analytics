@@ -8,7 +8,7 @@ class Evaluation extends Model {
     protected $_comment_evaluation;
     protected $_idteacher;
     protected $_idstudent;
-    protected $_tidmodule;
+    protected $_idmodule;
 
 	public function __toString() {
 		return get_class($this).": ".$this->title_evaluation;
