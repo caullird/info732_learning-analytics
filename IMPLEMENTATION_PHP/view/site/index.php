@@ -1,77 +1,4 @@
-<body class="mini-navbar">
-    <!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-    <!-- Start Left menu area -->
-    <div class="left-sidebar-pro">
-        <nav id="sidebar" class="active">
-            <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
-                <strong><a href="index.html"><img src="img/logo/logosn.png" alt="" /></a></strong>
-            </div>
-        </nav>
-    </div>
-    <!-- End Left menu area -->
-    <!-- Start Welcome area -->
-    <div class="all-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-advance-area">
-            <div class="header-top-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="header-top-wraper">
-                                <div class="row">
-                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
-                                        <div class="menu-switcher-pro">
-                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-<!--													<i class="educate-icon educate-nav"></i>-->
-												</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
-                                        
-                                    </div>
-                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                        <div class="header-right-info">
-                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                                          
-                                                <li class="nav-item">
-                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<img src="<?php echo $data['internaluser'][0]->picture ;?>" alt="" />
-															<span class="admin-name"><?php echo $data['internaluser'][0]->name_user ;?> <?php echo $data['internaluser'][0]->forname_user ;?> <b>(<?php echo $data['internaluser'][0]->username ;?>)</b></span>
-															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
-														</a>
-                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>Mes informations</a>
-                                                        </li>
 
-                                                        <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Me déconnecter</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-4">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-       
-    </div>
             <div class="breadcome-area">
                 <div class="container-fluid">
                     <div class="row">
@@ -80,7 +7,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
                                         <ul>
-                                            <li><span><h1>Hello <?php echo $data['internaluser'][0]->name_user ;?> <?php echo $data['internaluser'][0]->forname_user ;?>, nous sommes ravis de te retrouver ! </h1></span>
+                                            <li><span><h1>Hello <?php echo $_SESSION["user"][0]->name_user ;?> <?php echo $_SESSION["user"][0]->forname_user ;?>, nous sommes ravis de te retrouver ! </h1></span>
                                             </li>
                                         </ul>
                                     </div>
