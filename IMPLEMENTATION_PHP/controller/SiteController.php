@@ -6,13 +6,14 @@ class SiteController extends Controller {
 		//TODO Changer avec id de connexion
 
         like_student();
-
-		$this->render("index",
+		Course::get_next_course();
+		/*$this->render("index",
 			[
 				'module' => Module::findAll(),
-				'evaluation' => Evaluation::findAll()
+				'evaluation' => Evaluation::findAll(),
+				'course' => Course::findAll()
 			]
-		);
+		);*/
 	}
 }
 

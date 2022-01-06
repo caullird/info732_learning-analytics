@@ -20,23 +20,21 @@
 <div class="widget-program-bg">
     <div class="container-fluid">
         <div class="row">
-            <?php foreach ($data['module'] as &$module) { ?>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" >
-                        <div class="hpanel shadow-inner hbggreen bg-1 responsive-mg-b-30" >
-                            <div class="panel-body">
-                                <div class="text-center content-bg-pro">
-                                    
-                                    <h3>Examen <?php echo($module->title_module) ?></h3>
-                                    <small>
-                                        <?php echo $data["evaluation"][0]->title_evaluation ;?>
-                                            </small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <?php
+           
+            <?php 
+            $modules = $data['module'];
+            $courses = $data['course'];
+           
+            foreach ($modules as $module) {
+                echo $module->title_module;
+                foreach($courses as $course){
+          
+                    if ($course->idmodule->idmodule == $module->idmodule){
+                        echo $course->title_course;
                     }
+                }
+
+            }
             ?>
 
             
