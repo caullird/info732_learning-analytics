@@ -12,7 +12,7 @@ class SiteController extends Controller {
 		$this->render("index",
 			[
 				'module' => Module::findAll(),
-				'evaluation' => Evaluation::findAll();
+				'evaluation' => Evaluation::findAll()
 			]
 		);
 	}
