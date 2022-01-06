@@ -8,9 +8,9 @@ $(function() {
 
 	$('#calendar').fullCalendar({
 		header: {
-			left: 'prev,next today',
+			left: '',
 			center: 'title',
-			right: 'month,agendaWeek,agendaDay,listWeek'
+			right: ''
 		},
 		editable: true,
 		eventLimit: true, // allow "more" link when too many events
