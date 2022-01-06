@@ -79,11 +79,11 @@ CREATE TABLE IF NOT EXISTS building(
     );
 
 INSERT INTO building(idbuilding,name_building,description_building) VALUES
-(1,"Batiment B", "Description empty for this building"),
-(2,"Batiment R", "Description empty for this building"),
-(3,"Batiment Z", "Description empty for this building"),
-(4,"Batiment T", "Description empty for this building"),
-(5,"Batiment U", "Description empty for this building");
+(1,"Batiment B", "Description vide pour ce building"),
+(2,"Batiment R", "Description vide pour ce building"),
+(3,"Batiment Z", "Description vide pour ce building"),
+(4,"Batiment T", "Description vide pour ce building"),
+(5,"Batiment U", "Description vide pour ce building");
 
 
 CREATE TABLE IF NOT EXISTS classroom (
@@ -97,15 +97,15 @@ CREATE TABLE IF NOT EXISTS classroom (
     );
 
 INSERT INTO classroom(idclassroom,name_classroom,idbuilding,capacity_classroom, description_classroom) VALUES
-(1,"14",1,200, "Empty description for this classroom"),
-(2,"120",2,200, "Empty description for this classroom"),
-(3,"107",1,19, "Empty description for this classroom"),
-(5,"206",3,30, "Empty description for this classroom"),
-(6,"207",5,30, "Empty description for this classroom"),
-(7,"208",5,30, "Empty description for this classroom"),
-(8,"202",1,25, "Empty description for this classroom"),
-(9,"203",4,25, "Empty description for this classroom"),
-(10,"204",5,25, "Empty description for this classroom");
+(1,"14",1,200, "Description vide pour cette classroom"),
+(2,"120",2,200, "Description vide pour cette classroom"),
+(3,"107",1,19, "Description vide pour cette classroom"),
+(5,"206",3,30, "Description vide pour cette classroom"),
+(6,"207",5,30, "Description vide pour cette classroom"),
+(7,"208",5,30, "Description vide pour cette classroom"),
+(8,"202",1,25, "Description vide pour cette classroom"),
+(9,"203",4,25, "Description vide pour cette classroom"),
+(10,"204",5,25, "Description vide pour cette classroom");
 
 CREATE TABLE IF NOT EXISTS peoplegroup (
     idpeoplegroup int(11) NOT NULL AUTO_INCREMENT,
@@ -115,11 +115,11 @@ CREATE TABLE IF NOT EXISTS peoplegroup (
     );
 
 INSERT INTO peoplegroup (idpeoplegroup,title_peoplegroup,description_peoplegroup) VALUES
-(1,"IDU3","Description empty for this group"),
-(2,"IDU3-G1","Description empty for this group"),
-(3,"IDU3-G2","Description empty for this group"),
-(4,"Fi3","Description empty for this group"),
-(5,"Fi4","Description empty for this group");
+(1,"IDU3","Description vide pour ce group"),
+(2,"IDU3-G1","Description vide pour ce group"),
+(3,"IDU3-G2","Description vide pour ce group"),
+(4,"Fi3","Description vide pour ce group"),
+(5,"Fi4","Description vide pour ce group");
 
 CREATE TABLE IF NOT EXISTS belonggroup (
     idbelonggroup int(11) NOT NULL AUTO_INCREMENT,
@@ -169,9 +169,9 @@ CREATE TABLE IF NOT EXISTS educationalunit (
 
 
 INSERT INTO educationalunit (ideducationalunit,title_educationalunit,description_educationalunit) VALUES
-(1,"UE701 - Mathématiques et données","Description empty for this educational unit"),
-(2,"UE702 - Informatique et conception","Description empty for this educational unit"),
-(3,"UE703 - Visualisation et gouvernance de la donnée","Description empty for this educational unit");
+(1,"UE701 - Mathématiques et données","Description vide pour ce educational unit"),
+(2,"UE702 - Informatique et conception","Description vide pour ce educational unit"),
+(3,"UE703 - Visualisation et gouvernance de la donnée","Description vide pour ce educational unit");
 
 CREATE TABLE IF NOT EXISTS module (
     idmodule int(11) NOT NULL AUTO_INCREMENT,
@@ -184,9 +184,10 @@ CREATE TABLE IF NOT EXISTS module (
     );
 
 INSERT INTO module (idmodule,title_module, description_module, gradecoefficient_module, idteacher) VALUES
-(1,"DATA731 - Modélisation stochastique", "Description empty for this module",3.0, 1 ),
-(2,"INFO731 - Sécurité et cryptographie", "Description empty for this module", 3.0, 1),
-(3,"MATH741 - Probabilité et statistiques", "Description empty for this module", 2.0, 1);
+(1,"DATA731 - Modélisation stochastique", "Description vide pour ce module",3.0, 1 ),
+(2,"INFO731 - Sécurité et cryptographie", "Description vide pour ce module", 3.0, 1),
+(3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module", 2.0, 1),
+(4,"PROJ731 - Flux de données et accès concurrents", "Description vide pour ce module", 2.0, 1);
 
 CREATE TABLE IF NOT EXISTS typecourse (
     idtypecourse int(11) NOT NULL AUTO_INCREMENT,
@@ -221,11 +222,11 @@ CREATE TABLE IF NOT EXISTS course (
 
 
 INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idteacher,idclassroom,idpeoplegroup, idmodule,idtypecourse) VALUES
-(1,"TD 1/4","Description empty for this course", "12/01/2021","08:00:00", "10:00:00", 9, 1, 1, 1, 2),
-(2,"TD 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 2),
-(3,"TD 3/4","Description empty for this course", "12/01/2021","16:00:00", "18:00:00", 9, 3, 1, 1, 2),
-(4,"CM 1/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 1),
-(5,"CM 2/4","Description empty for this course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 1);
+(1,"TD 1/4","Description vide pour ce course", "12/01/2021","08:00:00", "10:00:00", 9, 1, 1, 1, 2),
+(2,"TD 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 2),
+(3,"TD 3/4","Description vide pour ce course", "12/01/2021","16:00:00", "18:00:00", 9, 3, 1, 1, 2),
+(4,"CM 1/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 1),
+(5,"CM 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 9, 2, 1, 1, 1);
 
 CREATE TABLE IF NOT EXISTS evaluation(
     idevaluation int(11) NOT NULL AUTO_INCREMENT,
@@ -260,9 +261,9 @@ CREATE TABLE IF NOT EXISTS homework(
     );
 
 INSERT INTO homework(idhomework, title_homework, description_homework, deadline, checked, idmodule, idstudent) VALUES
-(1, "Devoir Maison 1", "Description empty for this homework", "2021-01-01 00:00:00", FALSE, 1, 1),
-(2, "Devoir Maison 1", "Description empty for this homework", "2021-01-01 00:00:00", FALSE, 1, 2),
-(3, "Devoir Maison 1", "Description empty for this homework", "2021-01-01 00:00:00", FALSE, 1, 3);
+(1, "Devoir Maison 1", "Description vide pour ce homework", "2021-01-01 00:00:00", FALSE, 1, 1),
+(2, "Devoir Maison 1", "Description vide pour ce homework", "2021-01-01 00:00:00", FALSE, 1, 2),
+(3, "Devoir Maison 1", "Description vide pour ce homework", "2021-01-01 00:00:00", FALSE, 1, 3);
 
 CREATE TABLE IF NOT EXISTS moduleunit (
     idmoduleunit int(11) NOT NULL AUTO_INCREMENT,
