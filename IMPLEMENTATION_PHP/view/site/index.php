@@ -99,12 +99,12 @@
                             <div class="hpanel shadow-inner hbggreen bg-1 responsive-mg-b-30">
                                 <div class="panel-body">
                                     <div class="text-center content-bg-pro">
-                                        <h3>Title text</h3>
+                                        <h3>Examen MATH741</h3>
                                         <p class="text-big font-light">
-                                            20
+                                            13/01
                                         </p>
                                         <small>
-                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                            Probabilités & statistiques
                                                 </small>
                                     </div>
                                 </div>
@@ -114,12 +114,12 @@
                             <div class="hpanel shadow-inner hbgblue bg-2 responsive-mg-b-30">
                                 <div class="panel-body">
                                     <div class="text-center content-bg-pro">
-                                        <h3>Title text</h3>
+                                        <h3>Soutenance PROJ731</h3>
                                         <p class="text-big font-light">
-                                            160
+                                            17/01
                                         </p>
                                         <small>
-                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                            Présentation oral en groupe de 4 étudiants    
                                                 </small>
                                     </div>
                                 </div>
@@ -129,12 +129,12 @@
                             <div class="hpanel shadow-inner hbgyellow bg-3 responsive-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
                                 <div class="panel-body">
                                     <div class="text-center content-bg-pro">
-                                        <h3>Title text</h3>
+                                        <h3>INFO734</h3>
                                         <p class="text-big font-light">
-                                            750
+                                            24/01
                                         </p>
                                         <small>
-                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                            Projet boutique en ligne à rendre                                                    
                                                 </small>
                                     </div>
                                 </div>
@@ -144,12 +144,12 @@
                             <div class="hpanel shadow-inner hbgred bg-4 res-tablet-mg-t-30 dk-res-t-pro-30">
                                 <div class="panel-body">
                                     <div class="text-center content-bg-pro">
-                                        <h3>Title text</h3>
+                                        <h3>INFO731</h3>
                                         <p class="text-big font-light">
-                                            0,43
+                                            27/01
                                         </p>
                                         <small>
-                                                    Lorem Ipsum passages and more recently with desktop published software.
+                                                    Examen réseaux & systèmes répartis
                                                 </small>
                                     </div>
                                 </div>
