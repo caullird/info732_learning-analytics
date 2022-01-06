@@ -10,9 +10,7 @@ class CourseController extends Controller {
 
         like_admin();
 
-        $this->render("index",[
-            
-        ]);
+        $this->render("index");
     }
 
     public function student(){
