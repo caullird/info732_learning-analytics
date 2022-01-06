@@ -12,6 +12,8 @@ DROP TABLE IF EXISTS typecourse;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS evaluation;
 DROP TABLE IF EXISTS homework;
+DROP TABLE IF EXISTS moduleunit;
+DROP TABLE IF EXISTS modulestudent;
 
 CREATE TABLE IF NOT EXISTS internaluser (
     idinternaluser int(11) NOT NULL AUTO_INCREMENT,
@@ -243,9 +245,9 @@ CREATE TABLE IF NOT EXISTS evaluation(
     );
 
 INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_evaluation, idteacher, idstudent, idmodule) VALUES
-(1, "Probabilité Statistique", 20, "Bon travail !", 10, 1, 1),
-(2, "Probabilité Statistique", 10, "Du mieux depuis la dernière fois !", 10, 2,1),
-(3, "Probabilité Statistique", 20, "Bon travail !", 10, 3,1);
+(1, "Probabilité Statistique", 20, "Bon travail !", 1, 1, 1),
+(2, "Probabilité Statistique", 10, "Du mieux depuis la dernière fois !", 1, 2,1),
+(3, "Probabilité Statistique", 20, "Bon travail !", 1, 3,1);
 
 CREATE TABLE IF NOT EXISTS homework(
     idhomework int(11) NOT NULL AUTO_INCREMENT,
