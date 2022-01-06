@@ -132,7 +132,9 @@
                                     <p><span><i class="fa fa-clock"></i></span> <b>Coefficient : </b><?php echo $module->gradecoefficient_module; ?></p>
                                 </div>
                                 <div class="product-buttons">
-                                    <button type="button" class="button-default cart-btn">Read More</button>
+                                    <a class="product-buttons" href="<?php echo "?r=course/student&id=".$module->idmodule?>">
+                                        <button type="button" class="button-default cart-btn">En savoir plus sur le cours</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
