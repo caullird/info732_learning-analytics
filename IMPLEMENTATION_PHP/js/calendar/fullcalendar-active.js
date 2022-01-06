@@ -39,7 +39,7 @@ $(function() {
 			{
 				title: 'PROJ 731',
 				start: YM + '-14',
-				end: YM + '-17',
+				end: YM + '-18',
 				color: '#933EC5'
 			},
 			{
