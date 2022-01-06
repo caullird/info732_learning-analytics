@@ -33,25 +33,25 @@ $(function() {
 		events: [
 			{
 				title: 'Hackathon Sopra',
-				start: YM + '-01',
+				start: YM + '-12',
 				color: '#006DF0'
 			},
 			{
 				title: 'PROJ 731',
-				start: YM + '-07',
-				end: YM + '-10',
+				start: YM + '-14',
+				end: YM + '-17',
 				color: '#933EC5'
 			},
 			{
 				id: 999,
 				title: 'MATH 741',
-				start: YM + '-09T16:00:00',
+				start: YM + '-13T16:00:00',
 				color: '#0D4CFF'
 			},
 			{
 				id: 999,
 				title: 'INFO 734',
-				start: YM + '-16T16:00:00',
+				start: YM + '-24T16:00:00',
 				color: '#65b12d'
 			},
 			{
@@ -69,7 +69,7 @@ $(function() {
 			{
 				title: 'Déjeuner',
 				start: TODAY + 'T12:00:00',
-				color: '#D80027'
+				color: '#FF5722'
 			},
 			{
 				title: 'ISOC 731',
@@ -88,8 +88,8 @@ $(function() {
 			},
 			{
 				title: 'INFO 731',
-				start: TOMORROW + 'T07:00:00',
-				color: '#FF5722'
+				start: YM + '-27T07:00:00',
+				color: '#D80027'
 			},
 			{
 				title: 'Réunion Polycrew',
