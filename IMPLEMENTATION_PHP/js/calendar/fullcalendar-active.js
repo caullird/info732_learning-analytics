@@ -32,7 +32,7 @@ $(function() {
     },
 		events: [
 			{
-				title: 'All Day Event',
+				title: 'Hackathon Sopra',
 				start: YM + '-01',
 				color: '#006DF0'
 			},
@@ -44,13 +44,13 @@ $(function() {
 			},
 			{
 				id: 999,
-				title: 'Repeating Event',
+				title: 'MATH 731',
 				start: YM + '-09T16:00:00',
 				color: '#65b12d'
 			},
 			{
 				id: 999,
-				title: 'Repeating Event',
+				title: 'INFO 731',
 				start: YM + '-16T16:00:00',
 				color: '#D80027'
 			},
@@ -82,18 +82,18 @@ $(function() {
 				color: '#AA00FF'
 			},
 			{
-				title: 'Dinner',
+				title: 'Restaurant',
 				start: TODAY + 'T20:00:00',
 				color: '#00BCD4'
 			},
 			{
-				title: 'Birthday Party',
+				title: 'My Birthday',
 				start: TOMORROW + 'T07:00:00',
 				color: '#FF5722'
 			},
 			{
-				title: 'Click for Google',
-				url: 'http://google.com/',
+				title: 'Meeting Polycrew',
+				url: 'http://polycrew.fr/',
 				start: YM + '-28',
 				color: '#323232'
 			}
