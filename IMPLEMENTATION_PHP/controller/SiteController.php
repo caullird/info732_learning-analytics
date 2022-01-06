@@ -9,7 +9,7 @@ class SiteController extends Controller {
 
 		$this->render("index",
 			[
-				'module' => Module::findAll(),
+				'module' => Module::findAll()
 			]
 		);
 	}
