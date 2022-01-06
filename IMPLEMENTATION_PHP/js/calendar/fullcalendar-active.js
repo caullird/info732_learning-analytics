@@ -44,15 +44,15 @@ $(function() {
 			},
 			{
 				id: 999,
-				title: 'MATH 731',
+				title: 'MATH 741',
 				start: YM + '-09T16:00:00',
-				color: '#65b12d'
+				color: '#0D4CFF'
 			},
 			{
 				id: 999,
-				title: 'INFO 731',
+				title: 'INFO 734',
 				start: YM + '-16T16:00:00',
-				color: '#D80027'
+				color: '#65b12d'
 			},
 			{
 				title: 'PROJ 732',
@@ -69,7 +69,7 @@ $(function() {
 			{
 				title: 'Déjeuner',
 				start: TODAY + 'T12:00:00',
-				color: '#0D4CFF'
+				color: '#D80027'
 			},
 			{
 				title: 'ISOC 731',
