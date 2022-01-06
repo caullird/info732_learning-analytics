@@ -12,6 +12,8 @@ DROP TABLE IF EXISTS typecourse;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS evaluation;
 DROP TABLE IF EXISTS homework;
+DROP TABLE IF EXISTS moduleunit;
+DROP TABLE IF EXISTS modulestudent;
 
 CREATE TABLE IF NOT EXISTS internaluser (
     idinternaluser int(11) NOT NULL AUTO_INCREMENT,
