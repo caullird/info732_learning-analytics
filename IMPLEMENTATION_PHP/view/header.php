@@ -70,8 +70,8 @@
 <div class="left-sidebar-pro">
     <nav id="sidebar" class="active">
         <div class="sidebar-header">
-            <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
-            <strong><a href="index.html"><img src="img/logo/logosn.png" alt="" /></a></strong>
+            <a href="."><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+            <strong><a href="."><img src="img/logo/logosn.png" alt="" /></a></strong>
         </div>
     </nav>
 </div>
