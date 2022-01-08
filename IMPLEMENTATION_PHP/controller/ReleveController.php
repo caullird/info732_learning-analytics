@@ -1,27 +1,17 @@
 <?php
 
 class ReleveController extends Controller {
-    /*public function index() {
 
-        like_student();
-
-        $this->render("index",
-            [
-                'module' => Module::findAll(),
-                'evaluation' => Evaluation::findAll(),
-                'internaluser' => Internaluser::findAll()
-            ]
-        );
-    }*/
     public function student(){
 
         like_student();
 
+
         $this->render("index", [
             'module' => Module::findAll(),
-            'evaluation' => Evaluation::findAll(),
+            'evaluation' => Evaluation::findOne(['idstudent' => Student::findOne(['idinternaluser' => parameters()['id']])[0]->idstudent]),
             'educationalunit' => EducationalUnit::findAll(),
-            'internaluser' => Internaluser::findOne(['idinternaluser' => parameters()['id']])
+            'module_unit' => ModuleUnit::findAll()
         ]);
     }
 }
