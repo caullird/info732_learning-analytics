@@ -19,7 +19,6 @@
         </div>
     </div>
 </div>
-</div>
 
 <div class="blog-details-area mg-b-15">
     <div class="container-fluid">

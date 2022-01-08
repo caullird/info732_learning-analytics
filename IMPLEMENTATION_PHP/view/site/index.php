@@ -26,8 +26,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <ul>
-                                <li><span><h2>Votre programme à venir </h2></span>
-                                </li>
+                                <li><span><h2>Vos cours à venir </h2></span></li>
                             </ul>
                         </div>
                     </div>
@@ -87,8 +86,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <ul>
-                                <li><span><h2>Devoirs à venir ...</h2></span>
-                                </li>
+                                <li><span><h2>Vos devoirs à rendre</h2></span></li>
                             </ul>
                         </div>
                     </div>
@@ -143,8 +141,28 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <ul>
-                                <li><span><h2>Vos modules </h2></span>
-                                </li>
+                                <li><span><h2>Votre relevé de notes </h2></span></li>
+                            </ul>
+                            <a class="product-buttons" href="<?php echo "?r=releve/student&id=".$_SESSION["user"][0]->idinternaluser?>">
+                                <button type="button" class="button-default cart-btn">Voir le relevé</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="breadcome-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcome-list">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <ul>
+                                <li><span><h2>Vos modules </h2></span></li>
                             </ul>
                         </div>
                     </div>
@@ -167,7 +185,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="courses-inner res-mg-t-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n">
                         <div class="courses-title">
-                            <a href="#"><img src="https://source.unsplash.com/random/1200x800? <?php echo $module->title_module; ?>" alt="" /></a>
+                            <a href="<?php echo "?r=course/student&id=".$module->idmodule?>"><img src="https://source.unsplash.com/random/1200x800? <?php echo $module->idmodule; ?>" alt="" /></a>
                             <h2><?php echo $module->title_module; ?></h2>
                         </div>
                         <div class="course-des">

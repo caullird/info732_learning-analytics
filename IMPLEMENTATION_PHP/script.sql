@@ -244,9 +244,9 @@ CREATE TABLE IF NOT EXISTS evaluation(
     );
 
 INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_evaluation, idteacher, idstudent, idmodule) VALUES
-(1, "Probabilité Statistique CC1", 20, "Bon travail !", 1, 1, 1),
-(2, "Probabilité Statistique CC2", 10, "Du mieux depuis la dernière fois !", 1, 2,1),
-(3, "Probabilité Statistique CT", 20, "Bon travail !", 1, 3,1);
+(1, "Probabilité Statistique CC1", 20, "Bon travail !", 1, 1, 3),
+(2, "Probabilité Statistique CC2", 10, "Du mieux depuis la dernière fois !", 1, 2,3),
+(3, "Probabilité Statistique CT", 20, "Bon travail !", 1, 3,3);
 
 CREATE TABLE IF NOT EXISTS homework(
     idhomework int(11) NOT NULL AUTO_INCREMENT,
