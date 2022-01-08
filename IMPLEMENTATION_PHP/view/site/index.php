@@ -21,20 +21,29 @@
     <div class="container-fluid">
         <div class="row">
            
-            <?php 
-            $modules = $data['module'];
-            $courses = $data['course'];
-           
-            foreach ($modules as $module) {
-                echo $module->title_module;
-                foreach($courses as $course){
-          
-                    if ($course->idmodule->idmodule == $module->idmodule){
-                        echo $course->title_course;
-                    }
+            <?php
+                foreach($data['course'] as $course){
+            ?>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="hpanel shadow-inner hbggreen  bg-1 responsive-mg-b-30">
+                            <div class="panel-body">
+                                <div class="text-center content-bg-pro">
+                                    <h3>Prochain cours de <?php echo $course->idmodule->title_module ?></h3>
+                                    <p class="text-big font-light">
+                                        <?php
+                                            $date = new DateTime($course->timebegin_course);
+                                            echo $course->title_course . " le " . $course->day_course . " à " . date_format($date, 'H:i');
+                                        ?>
+                                    </p>
+                                    <small>
+                                        <?php echo $course->idclassroom->idbuilding->name_building . " | Salle " . $course->idclassroom->name_classroom ?>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <?php
                 }
-
-            }
             ?>
 
             
@@ -45,6 +54,45 @@
         </div>
     </div>
 
+</div>
+
+    <br>
+
+<div class="widgets-programs-area">
+    <div class="container-fluid">
+        <div class="row">
+
+            <?php
+                foreach($data['homework'] as $homework){
+                    ?>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="hpanel widget-int-shape responsive-mg-b-30">
+                                <div class="panel-body">
+                                    <div class="stats-title pull-left">
+                                        <h4><?php echo $homework->idmodule->title_module;;  ?></h4>
+                                    </div>
+                                    <div class="stats-icon pull-right">
+                                        <i class="educate-icon educate-professor"></i>
+                                    </div>
+                                    <div class="m-t-xl widget-cl-1">
+
+                                        <h1 class="text-success"><?php echo $homework->title_homework; ?></h1>
+                                        <small>
+                                            <?php echo $homework->description_homework;  ?>
+                                        </small>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-success widget-btn-1 btn-sm">Rendre le devoir</button>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                }
+            ?>
+
+
+        </div>
+    </div>
 </div>
 
 <div class="breadcome-area">
@@ -66,13 +114,14 @@
         </div>
     </div>
 
+
+
     <div class="courses-area mg-b-15">
     <div class="container-fluid">
         <div class="row">
 
             <?php
             foreach($data['module'] as $module){
-
             ?>
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -81,14 +130,9 @@
                             <a href="#"><img src="https://source.unsplash.com/random/1200x800? <?php echo $module->title_module; ?>" alt="" /></a>
                             <h2><?php echo $module->title_module; ?></h2>
                         </div>
-                        <div class="courses-alaltic">
-                            <!-- <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-clock"></i></span> 1 Year</span>
-                            <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-heart"></i></span> 50</span>
-                            <span class="cr-ic-r"><span class="course-icon"><i class="fa fa-dollar"></i></span> 500</span> -->
-                        </div>
                         <div class="course-des">
                             <p><span><i class="fa fa-clock"></i></span> <b>Unité d'enseignement : </b> 6 Months</p>
-                            <p><span><i class="fa fa-clock"></i></span> <b>Professeur référent :</b> TODO</p>
+                            <p><span><i class="fa fa-clock"></i></span> <b>Professeur référent :</b> <?php echo $module->idteacher->idinternaluser->forname_user . " " . $module->idteacher->idinternaluser->name_user;  ?> </p>
                             <p><span><i class="fa fa-clock"></i></span> <b>Coefficient : </b><?php echo $module->gradecoefficient_module; ?></p>
                         </div>
                         <div class="product-buttons">

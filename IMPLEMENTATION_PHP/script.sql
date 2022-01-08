@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS student (
     idinternaluser int(11) NOT NULL,
     PRIMARY KEY (idstudent),
     FOREIGN KEY (idinternaluser) REFERENCES internaluser(idinternaluser)
-    );
+);
 
 INSERT INTO student (idstudent,num_INE,num_student,idinternaluser) VALUES
 (1,"1445D8854","8985444447",1),
@@ -63,15 +63,14 @@ INSERT INTO student (idstudent,num_INE,num_student,idinternaluser) VALUES
 CREATE TABLE IF NOT EXISTS teacher (
     idteacher int(11) NOT NULL AUTO_INCREMENT,
     num_box int(11) NULL,
+    idinternaluser int(11) NOT NULL,
     PRIMARY KEY (idteacher)
     );
 
-INSERT INTO teacher (idteacher, num_box) VALUES
-(1, 201),
-(2, 202),
-(3, 203),
-(4, 204),
-(5, 205);
+INSERT INTO teacher (idteacher, num_box, idinternaluser) VALUES
+(1, 201, 9),
+(2, 202, 10),
+(3, 203, 11);
 
 CREATE TABLE IF NOT EXISTS building(
     idbuilding int(11) NOT NULL AUTO_INCREMENT,
@@ -224,11 +223,10 @@ CREATE TABLE IF NOT EXISTS course (
 
 
 INSERT INTO course (idcourse,title_course,description_course,day_course,timebegin_course,timeend_course,idteacher,idclassroom,idpeoplegroup, idmodule,idtypecourse) VALUES
-(1,"TD 1/4","Description vide pour ce course", "12/01/2021","08:00:00", "10:00:00", 4, 1, 1, 1, 2),
-(2,"TD 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 2, 2),
-(3,"TD 3/4","Description vide pour ce course", "12/01/2021","16:00:00", "18:00:00", 4, 3, 1, 3, 2),
-(4,"CM 1/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 4, 1),
-(5,"CM 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 4, 2, 1, 1, 1);
+(1,"TD 1/4","Description vide pour ce course", "12/01/2021","08:00:00", "10:00:00", 1, 1, 1, 1, 2),
+(2,"TD 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 1, 2, 1, 2, 2),
+(3,"CM 1/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 1, 2, 1, 4, 1),
+(4,"CM 2/4","Description vide pour ce course", "12/01/2021","14:00:00", "16:00:00", 1, 2, 1, 1, 1);
 
 CREATE TABLE IF NOT EXISTS evaluation(
     idevaluation int(11) NOT NULL AUTO_INCREMENT,
