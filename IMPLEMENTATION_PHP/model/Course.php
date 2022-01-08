@@ -18,22 +18,6 @@ class Course extends Model {
 		return get_class($this).": ".$this->title_course;
 	}
 
-    public static function get_next_course(){
-        $current_time_date = date('Y-m-d');
-        $current_time_hour = date('H:m');
-        //TODO DODOD
-        var_dump($current_time_date);
-        $sql = "select * from course where DATEDIFF(".$current_time_date.",day_course) > 0";
-        $st = db()->prepare($sql);
-		$st->execute();
-		$list = array();
-		while($row = $st->fetch(PDO::FETCH_ASSOC)) {
-			$list[] = new Course($row["idcourse"]);
-		}
-        echo count($list);
-        var_dump($list);
-
-    }
     
 }
 
