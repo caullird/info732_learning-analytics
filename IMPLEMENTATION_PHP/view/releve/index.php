@@ -18,25 +18,31 @@
 </div>
 <div class="widget-program-bg">
     <div class="container-fluid">
-        
-           
+        <?php
+           foreach($data['educationalunit'] as $educationalunit){
+               echo $educationalunit->title_educationalunit;
+        ?>
+
             <?php
                 foreach($data['module'] as $module){
+                    if ($module->idmodule == $moduleunit->idmodule->idmodule){
             ?>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <h3><?php echo $module->title_module ?></h3>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3><?php echo $module->title_module?></h3>
                     <?php
                         foreach($data['evaluation'] as $evaluation){
                             if ($evaluation -> idstudent -> idstudent == $data["internaluser"][0]->idinternaluser && $evaluation -> idmodule ->idmodule == $module->idmodule){ 
-                                echo $evaluation->title_evaluation." ".$evaluation->mark_evaluation." ".$evaluation->comment_evaluation;
+                                echo $evaluation->title_evaluation." | Note : ".$evaluation->mark_evaluation." | Commentaire : ".$evaluation->comment_evaluation;
                         } }
                     ?>
                 </div>
             </div>    
             <?php
-                }
+                }}
             ?>
-        
+        <?php
+            }
+        ?>    
     </div>
 </div>

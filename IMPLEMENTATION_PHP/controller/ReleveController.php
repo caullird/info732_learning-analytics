@@ -20,6 +20,7 @@ class ReleveController extends Controller {
         $this->render("index", [
             'module' => Module::findAll(),
             'evaluation' => Evaluation::findAll(),
+            'educationalunit' => EducationalUnit::findAll(),
             'internaluser' => Internaluser::findOne(['idinternaluser' => parameters()['id']])
         ]);
     }
