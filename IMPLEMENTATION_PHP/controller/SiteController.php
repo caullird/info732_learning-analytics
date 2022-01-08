@@ -10,7 +10,8 @@ class SiteController extends Controller {
 				'module' => Module::findAll(),
 				'evaluation' => Evaluation::findAll(),
 				'course' => Course::findAll(),
-                'homework' => Homework::findAll()
+                'homework' => Homework::findAll(),
+                'moduleunit' => ModuleUnit::findAll()
 			]
 		);
 	}

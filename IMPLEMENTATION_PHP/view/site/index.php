@@ -107,7 +107,7 @@
                             <div class="hpanel widget-int-shape responsive-mg-b-30">
                                 <div class="panel-body">
                                     <div class="stats-title pull-left">
-                                        <h4><?php echo $homework->idmodule->title_module;;  ?></h4>
+                                        <h4><?php echo $homework->idmodule->title_module;  ?></h4>
                                     </div>
                                     <div class="stats-icon pull-right">
                                         <i class="educate-icon educate-professor"></i>
@@ -180,6 +180,13 @@
 
             <?php
             foreach($data['module'] as $module){
+                foreach($data['moduleunit'] as $module_unit){
+                    if($module_unit->idmodule->idmodule == $module->idmodule){
+                        var_dump($module_unit->ideducationalunit);
+                    }
+                }
+
+                var_dump($module);
             ?>
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

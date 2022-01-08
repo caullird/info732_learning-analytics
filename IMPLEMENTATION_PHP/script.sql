@@ -179,17 +179,18 @@ CREATE TABLE IF NOT EXISTS module (
     idmodule int(11) NOT NULL AUTO_INCREMENT,
     title_module varchar(100) NOT NULL,
     description_module varchar(2000) NOT NULL,
+    photo_module varchar(2000) NOT NULL,
     gradecoefficient_module float NOT NULL,
     idteacher int(11) NOT NULL,
     FOREIGN KEY (idteacher) REFERENCES teacher(idteacher),
     PRIMARY KEY (idmodule)
     );
 
-INSERT INTO module (idmodule,title_module, description_module, gradecoefficient_module, idteacher) VALUES
-(1,"DATA731 - Modélisation stochastique", "Description vide pour ce module",3.0, 1 ),
-(2,"INFO731 - Sécurité et cryptographie", "Description vide pour ce module", 3.0, 1),
-(3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module", 2.0, 1),
-(4,"PROJ731 - Flux de données et accès concurrents", "Description vide pour ce module", 2.0, 1);
+INSERT INTO module (idmodule,title_module, description_module, photo_module, gradecoefficient_module, idteacher) VALUES
+(1,"DATA731 - Modélisation stochastique", "Description vide pour ce module","https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/8/c/98c8ee41b4_50151762_stochastique-romeof-fotolia.jpg",3.0, 1 ),
+(2,"INFO731 - Sécurité et cryptographie", "Description vide pour ce module","https://www.universitylib.com/wp-content/uploads/2020/09/arti1_cryptographie_sante-scaled-1.jpg", 3.0, 1),
+(3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module","http://www.traders-forex.com/img/probabilites-de-trading.png", 2.0, 1),
+(4,"PROJ731 - Flux de données et accès concurrents", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1);
 
 CREATE TABLE IF NOT EXISTS typecourse (
     idtypecourse int(11) NOT NULL AUTO_INCREMENT,

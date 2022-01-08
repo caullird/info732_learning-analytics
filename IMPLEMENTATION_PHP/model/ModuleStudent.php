@@ -1,6 +1,6 @@
 <?php
 
-class ModuleUnit extends Model {
+class ModuleStudent extends Model {
 
 	protected $_idmodulepeople;
 	protected $_idstudent;
