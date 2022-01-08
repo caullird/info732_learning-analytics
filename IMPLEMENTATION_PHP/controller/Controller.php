@@ -17,7 +17,7 @@ class Controller {
 
 		$data = $d;
 
-        if(!$model == "Login"){
+        if($model != "Login"){
             include_once "view/header.php";
             include_once "view/".strtolower($model)."/".$view.".php";
             include_once "view/footer.php";
