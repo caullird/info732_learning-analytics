@@ -39,7 +39,7 @@
                                 <div class="blog-details blog-sig-details">
                                     <div class="details-blog-dt blog-sig-details-dt courses-info mobile-sm-d-n">
                                         <span><a href="#"><i class="fa fa-heart"></i> <b>Nom du cours : </b> <?php echo $data['module'][0]->title_module; ?></a></span>
-                                        <span><a href="#"><i class="fa fa-user"></i> <b>Professeur référent : </b> <?php echo $data['module'][0]->title_module; ?></a></span>
+                                        <span><a href="#"><i class="fa fa-user"></i> <b>Professeur référent : </b> <?php echo $data['module'][0]->idteacher->idinternaluser->name_user . " " . $data['module'][0]->idteacher->idinternaluser->forname_user; ?></a></span>
                                         <span><a href="#"><i class="fa fa-user"></i> <b>Coefficient de la matière :</b> <?php echo $data['module'][0]->gradecoefficient_module; ?></a></span>
                                     </div>
                                     <h1><a class="blog-ht" href="#"><?php echo $data['module'][0]->title_module; ?></a></h1>
