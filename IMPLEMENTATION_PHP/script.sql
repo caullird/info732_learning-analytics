@@ -101,12 +101,13 @@ INSERT INTO classroom(idclassroom,name_classroom,idbuilding,capacity_classroom, 
 (1,"14",1,200, "Description vide pour cette classroom"),
 (2,"120",2,200, "Description vide pour cette classroom"),
 (3,"107",1,19, "Description vide pour cette classroom"),
+(4,"204",5,25, "Description vide pour cette classroom"),
 (5,"206",3,30, "Description vide pour cette classroom"),
 (6,"207",5,30, "Description vide pour cette classroom"),
 (7,"208",5,30, "Description vide pour cette classroom"),
 (8,"202",1,25, "Description vide pour cette classroom"),
-(9,"203",4,25, "Description vide pour cette classroom"),
-(10,"204",5,25, "Description vide pour cette classroom");
+(9,"203",4,25, "Description vide pour cette classroom");
+
 
 CREATE TABLE IF NOT EXISTS peoplegroup (
     idpeoplegroup int(11) NOT NULL AUTO_INCREMENT,
