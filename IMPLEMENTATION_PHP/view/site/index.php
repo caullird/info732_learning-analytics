@@ -182,21 +182,21 @@
             foreach($data['module'] as $module){
                 foreach($data['moduleunit'] as $module_unit){
                     if($module_unit->idmodule->idmodule == $module->idmodule){
-                        var_dump($module_unit->ideducationalunit);
+                        $unit = $module_unit->ideducationalunit->title_educationalunit;
                     }
                 }
-
-                var_dump($module);
             ?>
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="courses-inner res-mg-t-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n">
                         <div class="courses-title">
-                            <a href="<?php echo "?r=course/student&id=".$module->idmodule?>"><img src="https://source.unsplash.com/random/1200x800? <?php echo $module->idmodule; ?>" alt="" /></a>
+                            <a href="<?php echo "?r=course/student&id=".$module->idmodule?>">
+                                <img style="width: 1200px; height: 300px;" src="<?php echo $module->photo_module?>" alt="" />
+                            </a>
                             <h2><?php echo $module->title_module; ?></h2>
                         </div>
                         <div class="course-des">
-                            <p><span><i class="fa fa-clock"></i></span> <b>Unité d'enseignement : </b> 6 Months</p>
+                            <p><span><i class="fa fa-clock"></i></span> <b>Unité d'enseignement : </b><?php echo $unit; ?></p>
                             <p><span><i class="fa fa-clock"></i></span> <b>Professeur référent :</b> <?php echo $module->idteacher->idinternaluser->forname_user . " " . $module->idteacher->idinternaluser->name_user;  ?> </p>
                             <p><span><i class="fa fa-clock"></i></span> <b>Coefficient : </b><?php echo $module->gradecoefficient_module; ?></p>
                         </div>
