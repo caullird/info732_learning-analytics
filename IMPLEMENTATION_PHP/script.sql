@@ -243,9 +243,9 @@ CREATE TABLE IF NOT EXISTS evaluation(
     );
 
 INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_evaluation, idteacher, idstudent, idmodule) VALUES
-(1, "Probabilité Statistique", 20, "Bon travail !", 1, 1, 1),
-(2, "Probabilité Statistique", 10, "Du mieux depuis la dernière fois !", 1, 2,1),
-(3, "Probabilité Statistique", 20, "Bon travail !", 1, 3,1);
+(1, "Probabilité Statistique CC1", 20, "Bon travail !", 1, 1, 1),
+(2, "Probabilité Statistique CC2", 10, "Du mieux depuis la dernière fois !", 1, 2,1),
+(3, "Probabilité Statistique CT", 20, "Bon travail !", 1, 3,1);
 
 CREATE TABLE IF NOT EXISTS homework(
     idhomework int(11) NOT NULL AUTO_INCREMENT,
@@ -261,9 +261,9 @@ CREATE TABLE IF NOT EXISTS homework(
     );
 
 INSERT INTO homework(idhomework, title_homework, description_homework, deadline, checked, idmodule, idstudent) VALUES
-(1, "Devoir Maison 1", "Description vide pour ce homework", "2021-01-01 00:00:00", FALSE, 1, 1),
-(2, "Devoir Maison 1", "Description vide pour ce homework", "2021-01-01 00:00:00", FALSE, 1, 2),
-(3, "Devoir Maison 1", "Description vide pour ce homework", "2021-01-01 00:00:00", FALSE, 1, 3);
+(1, "DM numéro 1", "Sujet BAC France 2018", "2022-10-01 00:00:00", FALSE, 1, 1),
+(2, "TP Maison 3", "TP 3 : Réseaux et machines", "2021-10-01 00:00:00", FALSE, 1, 2),
+(3, "Devoir Maison 1", "Lecture d'articles", "2021-10-01 00:00:00", FALSE, 1, 3);
 
 CREATE TABLE IF NOT EXISTS moduleunit (
     idmoduleunit int(11) NOT NULL AUTO_INCREMENT,
