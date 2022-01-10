@@ -7,7 +7,12 @@ class AdminController extends Controller {
 
         $this->render("index",
             [
-                'module' => Module::findAll()
+                'module' => Module::findAll(),
+                'evaluation' => Evaluation::findAll(),
+                'course' => Course::findAll(),
+                'homework' => Homework::findAll(),
+                'moduleunit' => ModuleUnit::findAll(),
+                'students' => Student::findAll()
             ]
         );
     }

@@ -62,7 +62,7 @@ function id_or_back($data){
 }
 
 function like_admin(){
-    $iduser = 10;
+    $iduser = 9;
 
     $_SESSION["user"] = InternalUser::findOne(['idinternaluser' => $iduser]);
 }
