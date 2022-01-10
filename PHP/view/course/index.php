@@ -29,7 +29,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="latest-blog-single blog-single-full-view">
                                 <div class="blog-image">
-                                    <a href="#"><img src="https://source.unsplash.com/random/1920x400? <?php $data['module'][0]->title_module; ?>" alt="" />
+                                    <a href="#"><img style="width: 1920px; height: 600px;" src="<?php echo $data['module'][0]->photo_module?>" alt="" />
                                     </a>
                                     <div class="blog-date">
                                         <p><span class="blog-day"></span></p>
