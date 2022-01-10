@@ -28,7 +28,7 @@
                        echo "<br>";
                        foreach($data['evaluation'] as $evaluation){
                            if(($evaluation->idmodule->idmodule == $moduleunit->idmodule->idmodule)){
-                               var_dump($evaluation);
+                               echo $evaluation->title_evaluation." | ".$evaluation->mark_evaluation." | ".$evaluation->comment_evaluation;
                            }
                        }
                    }
