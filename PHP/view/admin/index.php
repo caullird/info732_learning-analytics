@@ -6,7 +6,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
                                         <ul>
-                                            <li><span><h1>Bonjour <?php echo $_SESSION["user"][0]->name_user ;?> <?php echo $_SESSION["user"][0]->forname_user ;?>, vous êtes connecté en tant que professeur ! </h1></span>
+                                            <li><span><h1>👋 Bonjour <?php echo $_SESSION["user"][0]->name_user ;?> <?php echo $_SESSION["user"][0]->forname_user ;?>, vous êtes connecté en tant que professeur ! </h1></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul>
-                                            <li><span><h2>Vos prochains cours </h2></span></li>
+                                            <li><span><h2>🏫 Vos prochains cours </h2></span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul>
-                                            <li><span><h2>Vos devoirs à corriger</h2></span></li>
+                                            <li><span><h2>📑 Vos devoirs à corriger</h2></span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul>
-                                            <li><span><h2>Vos étudiants </h2></span></li>
+                                            <li><span><h2>🧑🏽‍🎓 Vos étudiants </h2></span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul>
-                                            <li><span><h2>Vos modules </h2></span></li>
+                                            <li><span><h2>📖 Vos modules </h2></span></li>
                                         </ul>
                                     </div>
                                 </div>
