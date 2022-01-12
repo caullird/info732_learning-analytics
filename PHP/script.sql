@@ -125,30 +125,16 @@ INSERT INTO peoplegroup (idpeoplegroup,title_peoplegroup,description_peoplegroup
 
 CREATE TABLE IF NOT EXISTS belonggroup (
     idbelonggroup int(11) NOT NULL AUTO_INCREMENT,
-    idinternaluser int(11) NOT NULL,
+    idstudent int(11) NOT NULL,
     idpeoplegroup int(11) NOT NULL,
     PRIMARY KEY (idbelonggroup),
-    FOREIGN KEY (idinternaluser) REFERENCES internaluser(idinternaluser),
+    FOREIGN KEY (idstudent) REFERENCES student(idstudent),
     FOREIGN KEY (idpeoplegroup) REFERENCES peoplegroup(idpeoplegroup)
     );
 
-INSERT INTO belonggroup (idbelonggroup, idinternaluser,idpeoplegroup) VALUES
+INSERT INTO belonggroup (idbelonggroup, idstudent,idpeoplegroup) VALUES
 (1,1,1),
-(2,2,1),
-(3,3,1),
-(4,4,1),
-(5,5,1),
-(6,6,1),
-(7,7,1),
-(8,8,1),
-(9,1,2),
-(10,2,2),
-(11,3,2),
-(12,4,3),
-(13,5,2),
-(14,6,3),
-(15,7,3),
-(16,8,2);
+(2,2,1);
 
 CREATE TABLE IF NOT EXISTS formation (
     idformation int(11) NOT NULL AUTO_INCREMENT,
