@@ -16,7 +16,7 @@ class ReleveController extends Controller {
 
     public function admin(){
 
-        like_student();
+        like_admin();
 
         $this->render("index", [
             'module' => Module::findAll(),

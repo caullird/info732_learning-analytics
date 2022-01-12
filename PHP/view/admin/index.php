@@ -165,7 +165,7 @@
                                         <h2><?php echo $student->idinternaluser->name_user . " " . $student->idinternaluser->forname_user;?></h2>
                                         <p class="dp"><?php echo "<b>(" . $student->idinternaluser->username . ")</b> " . $student->idinternaluser->email;?></p>
                                         <br>
-                                        <a class="product-buttons" href="<?php echo "?r=releve/admin&id=".$student->idinternaluser->idinternaluser?>">
+                                        <a class="product-buttons" href="<?php echo "?r=releve/student&id=".$student->idinternaluser->idinternaluser?>">
                                             <button type="button" class="button-default cart-btn">Voir le relevé</button>
                                         </a>
                                     </div>
@@ -225,7 +225,7 @@
                                         <p><span><i class="fa fa-clock"></i></span> <b>Coefficient : </b><?php echo $module->gradecoefficient_module; ?></p>
                                     </div>
                                     <div class="product-buttons">
-                                        <a class="product-buttons" href="<?php echo "?r=course/student&id=".$module->idmodule?>">
+                                        <a class="product-buttons" href="<?php echo "?r=course/admin&id=".$module->idmodule?>">
                                             <button type="button" class="button-default cart-btn">Plus d'informations sur le module</button>
                                         </a>
                                     </div>
