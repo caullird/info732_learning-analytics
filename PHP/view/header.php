@@ -111,12 +111,24 @@
                                             <li class="nav-item">
                                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                     <img src="<?php echo $_SESSION["user"][0]->picture ;?>" alt="" />
+                                                    
                                                     <span class="admin-name"><?php echo $_SESSION["user"][0]->name_user ;?> <?php echo $_SESSION["user"][0]->forname_user ;?> <b>(<?php echo $_SESSION["user"][0]->username ;?>)</b></span>
+                                                    
                                                     <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                 </a>
                                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                    <li><a href="<?php echo "?r=infoprofile/student&id=".$_SESSION["user"][0]->idinternaluser ?>"><span class="edu-icon edu-home-admin author-log-ic"></span>Mes informations</a>
-                                                    </li>
+                                                    <li>
+                                                      
+                                                    <?php if(!$_SESSION["user"][0]->admin){ ?>
+                                                      <a href="<?php echo "?r=infoprofile/student&id=".$_SESSION["user"][0]->idinternaluser ?>"><span class="edu-icon edu-home-admin author-log-ic"></span>Mes informations</a>
+                                                    
+                                                    <?php }
+                                                    else{
+                                                      ?>
+                                                      <a href="<?php echo "?r=infoprofile/admin&id=".$_SESSION["user"][0]->idinternaluser ?>"><span class="edu-icon edu-home-admin author-log-ic"></span>Mes informations</a>
+                                                      <?php
+                                                    }
+                                                    ?></li>
 
                                                     <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Me déconnecter</a>
                                                     </li>
