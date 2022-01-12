@@ -191,10 +191,10 @@ INSERT INTO module (idmodule,title_module, description_module, photo_module, gra
 (2,"INFO731 - Sécurité et cryptographie", "Description vide pour ce module","https://www.universitylib.com/wp-content/uploads/2020/09/arti1_cryptographie_sante-scaled-1.jpg", 3.0, 1),
 (3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module","http://www.traders-forex.com/img/probabilites-de-trading.png", 2.0, 1),
 (4,"PROJ731 - Flux de données", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
-(5,"LANG701 - Anglais", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 1.0, 1),
-(6,"INFO732 - Conception et UML", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
-(7,"ISOC701 - Economie de la donnée", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 1.0, 1),
-(8,"INFO704 - Visualisation", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1);
+(5,"LANG701 - Anglais", "Description vide pour ce module","https://www.acs-ami.com/fr/blog/wp-content/uploads/2015/11/apprendre-anglais.jpg", 1.0, 1),
+(6,"INFO732 - Conception et UML", "Description vide pour ce module","https://formation.ctif.com/wp-content/uploads/sites/4/2018/07/Conception-industrialisation.jpg", 2.0, 1),
+(7,"ISOC701 - Economie de la donnée", "Description vide pour ce module","https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/optim/i/edit/ne/2020/01/gouvernance__w630.jpg", 1.0, 1),
+(8,"INFO704 - Visualisation", "Description vide pour ce module","https://recruteur.careerbuilder.fr/hs-fs/hubfs/Data-visualisation-data-storytelling-comment-ca-marche.jpg?width=845&name=Data-visualisation-data-storytelling-comment-ca-marche.jpg", 2.0, 1);
 
 CREATE TABLE IF NOT EXISTS typecourse (
     idtypecourse int(11) NOT NULL AUTO_INCREMENT,
