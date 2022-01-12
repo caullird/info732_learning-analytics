@@ -10,7 +10,8 @@ class ReleveController extends Controller {
             'module' => Module::findAll(),
             'evaluation' => Evaluation::findOne(['idstudent' => Student::findOne(['idinternaluser' => parameters()['id']])[0]->idstudent]),
             'educationalunit' => EducationalUnit::findAll(),
-            'module_unit' => ModuleUnit::findAll()
+            'module_unit' => ModuleUnit::findAll(),
+            'internal_user' => Student::findOne(['idinternaluser' => parameters()['id']])[0]->idinternaluser
         ]);
     }
 
@@ -22,7 +23,8 @@ class ReleveController extends Controller {
             'module' => Module::findAll(),
             'evaluation' => Evaluation::findOne(['idstudent' => Student::findOne(['idinternaluser' => parameters()['id']])[0]->idstudent]),
             'educationalunit' => EducationalUnit::findAll(),
-            'module_unit' => ModuleUnit::findAll()
+            'module_unit' => ModuleUnit::findAll(),
+            'internal_user' => Student::findOne(['idinternaluser' => parameters()['id']])[0]->idinternaluser
         ]);
     }
 }

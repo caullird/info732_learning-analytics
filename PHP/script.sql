@@ -37,8 +37,8 @@ INSERT INTO internaluser (idinternaluser,name_user,forname_user,email,password,u
 (6,"COCHARD","Antoine","antoine.cochard@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","cocharda",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',FALSE),
 (7,"SOUCHON","Romain","romain.souchon@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","souchonr",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',FALSE),
 (8,"FORRAY","Gabriel","gabriel.forray@etu.univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","forrayg",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',FALSE),
-(9,"ALLOUI","Ilham","ilham.alloui@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","allouii",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',FALSE),
-(10,"VALET","Lionel","lionel.valet@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","valetl",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',FALSE),
+(9,"ALLOUI","Ilham","ilham.alloui@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","allouii",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',TRUE),
+(10,"VALET","Lionel","lionel.valet@univ-smb.fr","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","valetl",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',TRUE),
 (11,"Administrateur","","admin@admin.admin","$2y$10$8.V7eL2.V02RR7gbut/QIeyS0KHl0f6HvCDZQASqpjfC4OQMKPASS","admin",'https://cdn.dribbble.com/users/6142/screenshots/5679189/media/1b96ad1f07feee81fa83c877a1e350ce.png?compress=1&resize=400x300',TRUE);
 
 CREATE TABLE IF NOT EXISTS student (
@@ -190,7 +190,7 @@ INSERT INTO module (idmodule,title_module, description_module, photo_module, gra
 (1,"DATA731 - Modélisation stochastique", "Description vide pour ce module","https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/8/c/98c8ee41b4_50151762_stochastique-romeof-fotolia.jpg",3.0, 1 ),
 (2,"INFO731 - Sécurité et cryptographie", "Description vide pour ce module","https://www.universitylib.com/wp-content/uploads/2020/09/arti1_cryptographie_sante-scaled-1.jpg", 3.0, 1),
 (3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module","http://www.traders-forex.com/img/probabilites-de-trading.png", 2.0, 1),
-(4,"PROJ731 - Flux de données", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
+(4,"PROJ731 - Flux de données et accès concurrents", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
 (5,"LANG701 - Anglais", "Description vide pour ce module","https://www.acs-ami.com/fr/blog/wp-content/uploads/2015/11/apprendre-anglais.jpg", 1.0, 1),
 (6,"INFO732 - Conception et UML", "Description vide pour ce module","https://formation.ctif.com/wp-content/uploads/sites/4/2018/07/Conception-industrialisation.jpg", 2.0, 1),
 (7,"ISOC701 - Economie de la donnée", "Description vide pour ce module","https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/optim/i/edit/ne/2020/01/gouvernance__w630.jpg", 1.0, 1),

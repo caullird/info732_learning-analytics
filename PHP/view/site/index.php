@@ -48,7 +48,7 @@
                         <div class="hpanel shadow-inner hbggreen  bg-1 responsive-mg-b-30">
                             <div class="panel-body">
                                 <div class="text-center content-bg-pro">
-                                    <h3>Prochain cours de <?php echo $course->idmodule->title_module ?></h3>
+                                    <h3><?php echo $course->idmodule->title_module ?></h3>
                                     <p class="text-big font-light">
                                         <?php
                                             $date = new DateTime($course->timebegin_course);

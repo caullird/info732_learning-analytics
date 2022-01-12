@@ -6,8 +6,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
                             <ul>
-
-                                 <li><span><h1>Relevé de notes | <?php echo $_SESSION["user"][0]->name_user." ".$_SESSION["user"][0]->forname_user; ?></h1></span>
+                                 <li><span><h1>Relevé de notes | <?php echo $data['internal_user']->name_user." ".$data['internal_user']->forname_user; ?></h1></span>
                                 </li>
                             </ul>
                         </div>
