@@ -63,7 +63,7 @@
                                                             </div>
                                                             
 
-                                                            <?php if($_SESSION["user"][0]->admin == 0){?>
+                                                            <?php if(!$_SESSION["user"][0]->admin){?>
                                                             <a href="?r=infoprofile/student&id=<?php echo $_SESSION["user"][0]->idinternaluser ?>" class="btn btn-primary waves-effect waves-light">Submit</a>
                                                             <?php } else { ?>
                                                                 <a href="?r=infoprofile/admin&id=<?php echo $_SESSION["user"][0]->idinternaluser ?>" class="btn btn-primary waves-effect waves-light">Submit</a>

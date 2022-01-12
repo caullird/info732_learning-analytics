@@ -21,8 +21,16 @@ class InfoprofileController extends Controller {
             'internaluser' => InternalUser::findOne(['idinternaluser' => parameters()['id']]),
         ]);
     }
-    public function mod_profil(){
+    public function mod_profil_student(){
         like_student();
+
+
+        $this->render("mod_profil", [
+            'internaluser' => InternalUser::findOne(['idinternaluser' => parameters()['id']]),
+        ]);
+    }
+    public function mod_profil_admin(){
+        like_admin();
 
 
         $this->render("mod_profil", [

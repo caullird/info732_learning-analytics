@@ -66,7 +66,11 @@
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
                                             <p><b>Modifier ses informations</b><br />
-                                                <a href="?r=infoprofile/mod_profil&id=<?php echo $_SESSION["user"][0]->idinternaluser ?>" class="btn btn-primary waves-effect waves-light">Modifier</a>
+                                                <?php if(!$internaluser->admin){?>
+                                                <a href="?r=infoprofile/mod_profil_student&id=<?php echo $_SESSION["user"][0]->idinternaluser ?>" class="btn btn-primary waves-effect waves-light">Modifier</a>
+                                                <?php } else {?>
+                                                <a href="?r=infoprofile/mod_profil_admin&id=<?php echo $_SESSION["user"][0]->idinternaluser ?>" class="btn btn-primary waves-effect waves-light">Modifier</a>
+                                                <?php } ?>
                                             </p>
                                         </div>
                                     </div>
