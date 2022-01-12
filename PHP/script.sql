@@ -190,7 +190,11 @@ INSERT INTO module (idmodule,title_module, description_module, photo_module, gra
 (1,"DATA731 - Modélisation stochastique", "Description vide pour ce module","https://cdn.futura-sciences.com/buildsv6/images/wide1920/9/8/c/98c8ee41b4_50151762_stochastique-romeof-fotolia.jpg",3.0, 1 ),
 (2,"INFO731 - Sécurité et cryptographie", "Description vide pour ce module","https://www.universitylib.com/wp-content/uploads/2020/09/arti1_cryptographie_sante-scaled-1.jpg", 3.0, 1),
 (3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module","http://www.traders-forex.com/img/probabilites-de-trading.png", 2.0, 1),
-(4,"PROJ731 - Flux de données et accès concurrents", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1);
+(4,"PROJ731 - Flux de données", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
+(5,"LANG701 - Anglais", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 1.0, 1),
+(6,"INFO732 - Conception et UML", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1);
+(7,"ISOC701 - Economie de la donnée", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 1.0, 1),
+(8,"INFO704 - Visualisation", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
 
 CREATE TABLE IF NOT EXISTS typecourse (
     idtypecourse int(11) NOT NULL AUTO_INCREMENT,
@@ -249,8 +253,12 @@ INSERT INTO evaluation(idevaluation, title_evaluation, mark_evaluation, comment_
 (2, "Probabilité Statistique CC2", 13, "Du mieux depuis la dernière fois !", 1, 1,3),
 (3, "Rendu projet 10-01-21", 18, "Très bon travail !", 1, 1,1),
 (4, "Lecture d'articles", 14, "Travail satisfaisant", 1, 1,2),
-(5, "Exam UML", 20, "Excellent travail !", 1, 1,4),
-(6, "Projet flux de données", 9, "Insuffisant", 1, 1,4);
+(5, "Exam UML", 20, "Excellent travail !", 1, 1,6),
+(6, "Projet flux de données", 9, "Insuffisant", 1, 1,4),
+(7, "Toeic", 770, "Dommage !", 1, 1,5),
+(8, "CT visualisation", 20, "Excellent travail !", 1, 1,8),
+(9, "Article ISOC", 17, "Excellent travail !", 1, 1,7),
+(10, "Exam ISOC", 12, "Bon travail !", 1, 1,7);
 
 CREATE TABLE IF NOT EXISTS homework(
     idhomework int(11) NOT NULL AUTO_INCREMENT,
@@ -282,7 +290,11 @@ CREATE TABLE IF NOT EXISTS moduleunit (
 INSERT INTO moduleunit (idmoduleunit,idmodule,ideducationalunit) VALUES
 (1,1,1),
 (2,2,1),
-(3,3,1);
+(3,3,1),
+(4,4,2),
+(5,5,2),
+(6,6,3),
+(7,7,3);
 
 CREATE TABLE IF NOT EXISTS modulestudent (
     idmodulepeople int(11) NOT NULL AUTO_INCREMENT,
