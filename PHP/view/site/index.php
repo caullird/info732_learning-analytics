@@ -143,9 +143,18 @@
                             <ul>
                                 <li><span><h2>📜 Votre relevé de notes </h2></span></li>
                             </ul>
-                            <a class="product-buttons" href="<?php echo "?r=releve/student&id=".$_SESSION["user"][0]->idinternaluser?>">
-                                <button type="button" class="button-default cart-btn">Voir le relevé</button>
-                            </a>
+                            <br>
+                            <center>
+                                <a class="product-buttons" href="<?php echo "?r=releve/student&id=".$_SESSION["user"][0]->idinternaluser?>">
+                                    <button type="button" class="button-default cart-btn">Voir le relevé - S6</button>
+                                </a>
+                                <a class="product-buttons" href="">
+                                    <button type="button" class="button-default cart-btn">Voir le relevé - S7</button>
+                                </a>
+                                <a class="product-buttons" href="">
+                                    <button type="button" class="button-default cart-btn">Voir le relevé - S8</button>
+                                </a>
+                            </center>
                         </div>
                     </div>
                 </div>

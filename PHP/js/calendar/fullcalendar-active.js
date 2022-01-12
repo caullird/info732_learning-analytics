@@ -9,7 +9,7 @@ $(function() {
 	$('#calendar').fullCalendar({
 		header: {
 			left: '',
-			center: 'title',
+			center: '📆 title',
 			right: ''
 		},
 		editable: true,
