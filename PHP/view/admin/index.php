@@ -165,7 +165,7 @@
                                         <h2><?php echo $student->idinternaluser->name_user . " " . $student->idinternaluser->forname_user;?></h2>
                                         <p class="dp"><?php echo "<b>(" . $student->idinternaluser->username . ")</b> " . $student->idinternaluser->email;?></p>
                                         <br>
-                                        <a class="product-buttons" href="<?php echo "?r=releve/student&id=".$student->idinternaluser->idinternaluser?>">
+                                        <a class="product-buttons" href="<?php echo "?r=releve/admin&id=".$student->idinternaluser->idinternaluser?>">
                                             <button type="button" class="button-default cart-btn">Voir le relevé</button>
                                         </a>
                                     </div>
