@@ -20,7 +20,9 @@
     <div class="container-fluid">
         <?php
            $internaluser = $data['internaluser'][0];
-           $student = $data["student"][0];
+           if(!$internaluser->admin){
+            $student = $data["student"][0];
+           }
         ?>
         <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
@@ -32,6 +34,7 @@
                             </div>
                             <div class="profile-details-hr">
                                 <div class="row">
+                                    <?php if(!$internaluser->admin){ ?>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
                                             <p><b>Numéro INE</b><br /> <?php echo $student->num_INE ?></p>
@@ -42,6 +45,7 @@
                                             <p><b>Numéro étudiant</b><br /> <?php echo $student->num_student ?></p>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
                                             <p><b>Nom</b><br /> <?php echo $internaluser->name_user ?></p>
