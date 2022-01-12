@@ -192,9 +192,9 @@ INSERT INTO module (idmodule,title_module, description_module, photo_module, gra
 (3,"MATH741 - Probabilité et statistiques", "Description vide pour ce module","http://www.traders-forex.com/img/probabilites-de-trading.png", 2.0, 1),
 (4,"PROJ731 - Flux de données", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
 (5,"LANG701 - Anglais", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 1.0, 1),
-(6,"INFO732 - Conception et UML", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1);
+(6,"INFO732 - Conception et UML", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
 (7,"ISOC701 - Economie de la donnée", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 1.0, 1),
-(8,"INFO704 - Visualisation", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1),
+(8,"INFO704 - Visualisation", "Description vide pour ce module","http://www.cncrgroup.com/wp-content/uploads/2021/05/31965-12970.jpg", 2.0, 1);
 
 CREATE TABLE IF NOT EXISTS typecourse (
     idtypecourse int(11) NOT NULL AUTO_INCREMENT,
