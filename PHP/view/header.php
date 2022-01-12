@@ -115,7 +115,7 @@
                                                     <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                 </a>
                                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                    <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>Mes informations</a>
+                                                    <li><a href="<?php echo "?r=infoprofile/student&id=".$_SESSION["user"][0]->idinternaluser ?>"><span class="edu-icon edu-home-admin author-log-ic"></span>Mes informations</a>
                                                     </li>
 
                                                     <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Me déconnecter</a>
