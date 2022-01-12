@@ -36,7 +36,9 @@
                                             echo "<tr>";
                                             foreach($data['evaluation'] as $evaluation){
                                                 if(($evaluation->idmodule->idmodule == $moduleunit->idmodule->idmodule)){
+                                                    echo "<tr>";
                                                     echo "<td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;" . $evaluation->title_evaluation ." | ".$evaluation->comment_evaluation . " | Note : <b>" . $evaluation->mark_evaluation . "</b></td>";
+                                                    echo "</tr>";
                                                 }
                                             }
                                         }
